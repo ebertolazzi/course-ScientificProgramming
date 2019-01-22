@@ -1,162 +1,142 @@
 #include <stdio.h> /* da spiegare piu' avanti */
 
 /*
- * in C esistono un certo numeri di "tipi"
- * numerici predefiniti:
+ * in C there exists predefined "types"
  *
- * int = intero con segno, tipicamente composto
- *       da 2 o 4 o 8 byte. Il numero di byte e'
- *       quello della "parola" (word) del processore.
- *       Ad esempio su processori a 32 bit (4 byte)
- *       l'intero e' di 4 byte.
+ * int = ineger with sign, typical size is
+ *       2, 4 or 8 bytes.
  *
- * float  = numero floating point in singola precisione
- *          tipicamante 4 byte
+ * float  = floating point number singple precision (4 bytes)
  *
- * double = numero floating point in doppia precisione
- *          tipicamante 8 byte
+ * double = floating point number double precision (8 bytes)
  *
- * char = tipo carattere, un byte usato per memorizzare
- *        un carattere (ascii)
+ * char = charater type, 1 byte used for ascii character
  *
  */
 
 /*
- * A questi tipi si possono mettere dei "modificatori"
+ * Some "modifier"
  *
- *
- * unsigned = si applica a int e char.
- *            l'intero e il carattere non hanno segno
+ * unsigned = in front of `int` and `char`.
  *            unsigned int
  *            unsigned char.
- *            Di solito si usa la forma abbreviata
+ *            You can use the shortcut
  *            unsigned = unsigned int
  *
- * short    = si applica a int
- *            short int e' un intero che puo' usare
- *            meno byte di int, tipicamente 2 byte
- *            su un processore a 32 bit.
- *            Di solito si usa la forma abbreviata
- *            short = short int
+ * signed = in front of `int` and `char`.
+ *            signed int
+ *            signed char.
+ *            You can use the shortcut
+ *            int = signed int
+ *            signed char != unsigned char
  *
- * long     = si applica a int e double
- *            long int e' un intero che puo' usare
- *            piu' byte di int, tipicamente 8 byte
- *            su un processore a 32 bit.
- *            long double e' una numero floating
- *            point di precisione quadrupla.
- *            Non e' implementato su tutti i compilatori.
+ * short = in front of `int`
+ *         You can use the shortcut
+ *         short = short int
  *
+ * long = in front of `int`
+ *        You can use the shortcut
+ *        long = long int *
  */
 
 int
 main()
 {
   /*
-   * alcuni esmopi d'uso
+   * some example
    */
 
-  int i, j, k; /* definisco le variabili i,j,k
-                  come varibili intere con segno */
+  int i, j, k; /* define i,j,k as integer with sign */
 
-  short l, m;  /* definisco le variabili l,m
-                  come varibili intere "corte" con segno */
+  short l, m;  /* define l,m as signed short integer */
  
-  float a, b; /* definisco le variabili a,b
-                 come varibili floating point
-                 in singola precisione */
+  float a, b; /* define a,b as floating point
+                 singola precision */
 
-  double c, d; /* definisco le variabili c, d
-                   come varibili floating point
-                   in doppia precisione */
+  double c, d; /* define c,d as floating point
+                  double precision*/
 
-  unsigned int o, p; /* definisco le variabili o, p
-                        come varibili intere
-                        senza segno */
+  unsigned int o, p; /* define o, p
+                        as integer without sign */
 
-  unsigned long int r, s; /* definisco le variabili r, s
-                             come varibili intere
-                             senza segno "lunghe" */
+  unsigned long int r, s; /* define o, p
+                             as big integer without sign */
 
   /*
-   * sizeof(argument) : argument e' un tipo
-   *                    restituisce il numero di byte
-   *                    usato per rappresentarlo 
+   * sizeof(argument) : argument is a type or a variable
+   *                    return the number of bytes
+   *                    used to store it
    *
    */
 
-  printf("n. byte per tipo \"char\" %ld\n", sizeof(char)) ;
-  printf("n. byte per tipo \"short\" %ld\n", sizeof(short)) ;
-  printf("n. byte per tipo \"int\" %ld\n", sizeof(int)) ;
-  printf("n. byte per tipo \"long\" %ld\n", sizeof(long)) ;
-  printf("n. byte per tipo \"float\" %ld\n", sizeof(float)) ;
-  printf("n. byte per tipo \"double\" %ld\n", sizeof(double)) ;
+  printf("n. byte used for \"char\" %ld\n", sizeof(char)) ;
+  printf("n. byte used for \"short\" %ld\n", sizeof(short)) ;
+  printf("n. byte used for \"int\" %ld\n", sizeof(int)) ;
+  printf("n. byte used for \"long\" %ld\n", sizeof(long)) ;
+  printf("n. byte used for \"float\" %ld\n", sizeof(float)) ;
+  printf("n. byte used for \"double\" %ld\n", sizeof(double)) ;
   
 
-  /* assegnazioni varie */
   i = 11 ;
-  j = 23 ; k = 3434 ; /* posso scrivere piu'
-                     instruzioni per riga */
+  j = 23 ; k = 3434 ;
 
-  printf("numeri in decimale i=%d j=%10d k=%-10d***\n",i,j,k) ;
+  printf("numer in decimal i=%d j=%10d k=%-10d***\n",i,j,k) ;
 
-  /* stampo i numeri in ottale */
-  printf("numeri in ottale i=%o j=%10o k=%-10o***\n",i,j,k) ;
+  printf("numer in octal i=%o j=%10o k=%-10o***\n",i,j,k) ;
 
-  /* stampo i numeri in esadecimale */
-  printf("numeri in esadecimale i=%x j=%10x k=%-10X***\n",i,j,k) ;
+  printf("numer in hexadecimal i=%x j=%10x k=%-10X***\n",i,j,k) ;
  
   /*
-  // Formattazione stampa interi
+  // Formatting
   //
-  // %d    intero decimale
-  // %ld   intero long decimale
-  // %o    intero in ottale
-  // %x %X intero in esadecimale
+  // %d    integer decimal
+  // %ld   integer long decimal
+  // %o    integer in octal
+  // %x %X integer in hexadecimal
   //
-  // %23d  riservo 23 spazi per la stampa
-  //       con allineamento a a destra
-  // %-12d riservo 12 spazi per la stampa
-  //       con allineamento a sinistra
+  // %23d  reserve 23 spaces for the print
+  //       with right alignment
+  // %-12d reserve 12 spaces for the print
+  //       with left alignment
   */
 
-  l = m = -12 ; /* equivalente a scrivere 
+  l = m = -12 ; /* equivalent to write
                   m = 12 ; l = m ; */
 
-  printf("numeri (short) l=%d m=%10d\n",l,m) ;
+  printf("number (short) l=%d m=%10d\n",l,m) ;
 
   a = b = 1.2f ; /* f e' postfisso per indicare
                     la singola precisione */
 
-  printf("numeri (float) a[%%f]=%f b[%%10f]=%10f\n",a,b) ;
-  printf("numeri (float) a[%%10.2f]=%10.2f b[%%-10.4f]=%-10.4f\n",a,b) ;
+  printf("number (float) a[%%f]=%f b[%%10f]=%10f\n",a,b) ;
+  printf("number (float) a[%%10.2f]=%10.2f b[%%-10.4f]=%-10.4f\n",a,b) ;
   
   c = 1.2 ;
   d = 2 ;
 
-  printf("numeri (double) c[%%lf]=%lf d[%%10lf]=%10lf\n",c,d) ;
-  printf("numeri (double) c[%%10.2lf]=%10.2lf d[%%-10.4lf]=%-10.4lf\n",c,d) ;
+  printf("number (double) c[%%lf]=%lf d[%%10lf]=%10lf\n",c,d) ;
+  printf("number (double) c[%%10.2lf]=%10.2lf d[%%-10.4lf]=%-10.4lf\n",c,d) ;
 
   /*
-  // Formattazione stampa numeri in floating point
+  // Formatting floating point numbers
   //
-  // %f      singola precisione
-  // %lf     doppia precisione
-  // %10f    riservo 10 spazi per la stampa
-  // %10.4f  riservo 10 spazi per la stampa, 4 per la parte decimale
-  // %-10f   riservo 10 spazi per la stampa allineato a sinista
+  // %f      singola precision
+  // %lf     double precision
+  // %10f    riserve 10 spaces for the print
+  // %10.4f  riserve 10 spaces for the print, 4 for the decimal part
+  // %-10f   riserve 10 spaces for the print left aligned
   //
-  // al posto di "f" posso usare "e" per formato esponenziale
+  // instead of "f" use "e" for esponential format
   // 12.34 ==> 1.234E1 E1 = 10^1
   //
-  // al posto di "f" posso usare "g" per formato esponenziale
-  // quando conviene
+  // instead of "f" use "g" for esponential format
+  // when convenient
   //
   */
-  printf("numeri (double) c[%%lg]=%lg d[%%10lg]=%10lg\n",c,d) ;
-  printf("numeri (double) c[%%10.2le]=%10.2le d[%%-10.4le]=%-10.4le\n",c,d) ;
+  printf("number (double) c[%%lg]=%lg d[%%10lg]=%10lg\n",c,d) ;
+  printf("number (double) c[%%10.2le]=%10.2le d[%%-10.4le]=%-10.4le\n",c,d) ;
 
-  o = -1 ; /* occhio! assegno intero con segno ad un unsigned */
+  o = -1 ; /* warning! assign signed integr to unsigned */
   p = 2  ;
 
   r = s = 12 ;
