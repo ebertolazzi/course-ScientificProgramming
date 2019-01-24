@@ -1,20 +1,25 @@
 #include <stdio.h>
+
+// for malloc, calloc, free
 #include <stdlib.h>
+
+// contains information of the size and range of the standard C-type
+// used for access INT_MAX
 #include <limits.h>
-#include <math.h>
+
+// for strcmp and string manipulation
 #include <string.h>
 
+//
 static
 void
 sieve( int is_prime[], int N ) {
-  int i, j, M;
+  int i, j;
 
   // all number are prime
   for ( i = 0; i < N; ++i ) is_prime[i] = 1;
 
   // use the sieve to remove composed integer
-  M = (int) floor(sqrt( (double)N )) ;
-  printf("Start loop %d.\n", M );
   for ( i=2; i < N; ++i ) {
     if ( is_prime[i] == 1 ) {
       // `i` is prime, remove all multiple
@@ -42,15 +47,17 @@ pretty_print( int is_prime[], int N ) {
 static
 int
 parse_command( int argc, char const *argv[] ) {
-  int  N, ierr;
+  int  N, iparsed;
   char out[100];
   if ( argc != 2 ) {
     printf("command: %s N\nexpected 1 argument found %d\n",
            argv[0], argc-1);
     exit(0);
   }
-  ierr = sscanf(argv[1], "%d", &N );
-  if ( ierr != 1 ) {
+  // sscanf parse the string pointed by argv[1] as integer
+  // and store in N
+  iparsed = sscanf(argv[1], "%d", &N );
+  if ( iparsed != 1 ) {
     printf("command: %s N\nN must be > 1 and <= %d, found N = %s\n",
            argv[0], INT_MAX, argv[1] );
     exit(0);
@@ -61,12 +68,6 @@ parse_command( int argc, char const *argv[] ) {
            argv[0], argv[1], N, argv[1] );
     exit(0);
   }
-  if ( ierr != 1 ) {
-    printf("command: %s N\nN must be > 1 and <= %d, found N = %s\n",
-           argv[0], INT_MAX, argv[1] );
-    exit(0);
-  }
-
   if ( N < 2 ) {
     printf("command: %s N\nN must be > 1 and <= %d, found %d\n",
            argv[0], INT_MAX, N );

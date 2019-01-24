@@ -1,16 +1,29 @@
+// I/O functions like printf, scanf etc
 #include <stdio.h>
+
+// Standard function for OS interface, exit() ...
 #include <stdlib.h>
 
 /*!
  | Search prime numbers less <= 1000
  | version 1
 \*/
-int
-main() {
-  int is_prime[1001];
+int // return value to the OS
+main() { // main = entry point for the compiled program
+  int is_prime[1001]; // define is_prime as a vector of 1001 elements]
+                      // is_prime[0] ... is_prime[1000]
   int i, j, k;
 
   // all number are prime
+  // for ( (1) INITIAL; (2) CHECK; (3) INCREMENT ) (4) STATEMENT;
+  //
+  // (1)
+  // loop:
+  // if ( not (2) ) goto exit;
+  // (4); (3)
+  // goto loop;
+  // exit:
+  //
   for ( i = 0; i <= 1000; ++i ) is_prime[i] = 1;
 
   // use the sieve to remove composed integer

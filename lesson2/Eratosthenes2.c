@@ -1,11 +1,17 @@
+// I/O functions like printf, scanf etc
 #include <stdio.h>
+
+// Standard function for OS interface, exit() ...
 #include <stdlib.h>
 
 /*!
- | Search prime numbers less <= 1000
+ | Search prime numbers less <= NMAX
  | version 2
 \*/
 
+// define a macros so that the preprocessor
+// substitute NMAX with  100000 every time
+// NMAX appears in the source code
 #define NMAX 100000
 
 int
@@ -13,10 +19,18 @@ main() {
   int is_prime[NMAX+1];
   int i, j, k, N;
 
-  printf("Find all prime number less than N (<= 100000)\n\n");
-  printf("Insert N: ");
+  printf("Find all prime number less than N (<= %d)\n\n",NMAX);
+
+  //
+  // do { (1) INSTRUCTIONS } while ( (2) CHECK )
+  //
+  // loop:
+  //   (1)
+  //  if ( not (2) ) goto loop;`
+  //
 
   do {
+    printf("Insert N: ");
     scanf("%d", &N);
     // some check
     if ( N < 2 || N > NMAX )

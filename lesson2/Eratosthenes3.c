@@ -1,12 +1,25 @@
 #include <stdio.h>
+
+// for malloc, calloc, free
 #include <stdlib.h>
+
+// contains information of the size and range of the standard C-type
+// used for access INT_MAX
 #include <limits.h>
-#include <math.h>
 
 int
 main( int argc, char const *argv[] ) {
+  // is_prime is defined as a pointer to int
+  // arithmetic of pointer:
+  // *is_prime --> deference a pointer, get the content pointed by is_prime
+  // ++is_prime increment the address by the size of int
+  // --is_prime decrement the address by the size of int
+  // is_prime + 12 add 12 * sizeof(int) byte to the addess contained in is_prime
+  // *(is_prime + 5) accessing the 6th int element starting from the addess
+  //                 of is_prime
+  // *(is_prime + 5) == is_prime[5]
   int * is_prime;
-  int i, j, k, N, M;
+  int i, j, k, N;
 
   printf("Find all prime number less than N (<= %d)\n\n",INT_MAX);
   printf("Insert N: ");
@@ -18,7 +31,9 @@ main( int argc, char const *argv[] ) {
       printf("N must be > 1 and <= %d\nTry again:", INT_MAX );
   } while ( N < 2 );
 
-  // allocate memory
+  // allocate memory for N elements of size in byte sizeof(int)
+  // is_prime is the pointer of the beginning of the allocated
+  // memory block
   is_prime = calloc( N, sizeof(int));
 
   // check allocation
@@ -33,8 +48,6 @@ main( int argc, char const *argv[] ) {
   for ( i = 0; i < N; ++i ) is_prime[i] = 1;
 
   // use the sieve to remove composed integer
-  M = (int) floor(sqrt( (double)N )) ;
-  printf("Start loop %d.\n", M );
   for ( i=2; i < N; ++i ) {
     if ( is_prime[i] == 1 ) {
       // `i` is prime, remove all multiple
@@ -54,6 +67,7 @@ main( int argc, char const *argv[] ) {
   }
   if ( (k % 10) != 1 ) printf("\n");
 
+  // free the allocated memory and return it to the OS
   free (is_prime);
   return 0;
 }
