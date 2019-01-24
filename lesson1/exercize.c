@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> // for exit()
 
 /*\
  *  Write a program that compute 3-bonacci number
@@ -16,28 +17,51 @@
 \*/
 
 unsigned long
-threeBonacci( unsigned long n ) {
-  unsigned long tbn;
-  // do something
+threeBonacci_recursive(unsigned long n) {
+  // close recursion
+  if (n <= 2) return 1;
 
+  return threeBonacci_recursive(n - 1) + threeBonacci_recursive(n - 2) +
+         threeBonacci_recursive(n - 3);
+}
 
-  return tbn;
+unsigned long
+threeBonacci(unsigned long n) {
+  // close recursion
+  if (n <= 2) return 1;
+  unsigned long t3  = 1;
+  unsigned long t2  = 1;
+  unsigned long t1  = 1;
+  unsigned long res = 1;
+  int           j;
+  for (j = 3; j <= n; ++j) {
+    res = t1 + t2 + t3; // next 3-bonacci
+    // check for overflow
+    if (res <= t1) {
+      printf("OVERFLOW!\n");
+      exit(0);
+    }
+    // shift for next loop
+    t3 = t2;
+    t2 = t1;
+    t1 = res;
+  }
+  return res;
 }
 
 int
 main() {
   unsigned long n, tbn;
 
-  printf("Give me a number: " ) ;
-
-  scanf("%XXX",&n);
+  printf("Give me a number: ");
+  scanf("%lu", &n);
 
   // print some messages...
 
   // call the function
-  tbn = threeBonacci( n );
+  tbn = threeBonacci(n);
 
-  printf("F(%XXX) = %XXX\n", n, tbn);
+  printf("F(%lu) = %lu\n", n, tbn);
 
-  return 0 ;
+  return 0;
 }
