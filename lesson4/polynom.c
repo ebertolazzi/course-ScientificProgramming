@@ -18,6 +18,7 @@ Polynom_New(
   pP->coeffs      = calloc( n_allocated, sizeof(real_type) );
   // check memory allocation
   if ( pP->coeffs == NULL ) return -2;
+  return 0;
 }
 
 int_type
@@ -35,12 +36,13 @@ Polynom_Resize(
   for ( int_type i = 0; i <= pP->degree; ++i )
     pP->coeffs[i] = psaved[i];
   free(psaved);
+  return 0;
 }
 
 int_type
 Polynom_Exchange(
   Polynom * pP,
-  Polynom * pQ,
+  Polynom * pQ
 ) {
   int_type tmp = pP->degree; pP->degree = pQ->degree; pQ->degree = tmp;
 
@@ -49,6 +51,7 @@ Polynom_Exchange(
   pQ->n_allocated = tmp;
 
   real_type * pp = pP->coeffs; pP->coeffs = pQ->coeffs; pQ->coeffs = pp;
+  return 0;
 }
 
 /*!
@@ -63,6 +66,7 @@ Polynom_Delete( Polynom * pP ) {
   }
   pP->n_allocated = 0;
   pP->degree      = -1; // degree of nothing is -1
+  return 0;
 }
 
 /*!
@@ -82,6 +86,7 @@ Polynom_Set(
   } else {
     return -1;
   }
+  return 0;
 }
 
 int_type
@@ -112,6 +117,7 @@ Polynom_Print(
     fprintf( fd, fmt[k], c, i );
   }
   fprintf( fd, "\n" );
+  return 0;
 }
 
 /*!
@@ -121,13 +127,14 @@ Polynom_Assign(
   Polynom       * pP,
   Polynom const * pQ
 ) {
-  if ( pP->n_allocated <= pQ->degree ) {]
+  if ( pP->n_allocated <= pQ->degree ) {
     // re-allocate if necessary
     Polynom_Resize( pP, pQ->degree+1);
   }
   pP->degree = pQ->degree;
   for ( int_type i=0; i <= pQ->degree; ++i )
     pP->coeffs[i] = pQ->coeffs[i];
+  return 0;
 }
 
 /*!
@@ -139,6 +146,7 @@ Polynom_ScalarMultiply(
 ) {
   for ( int_type i=0; i <= pP->degree; ++i )
     pP->coeffs[i] *= a;
+  return 0;
 }
 
 /*!
@@ -148,7 +156,7 @@ Polynom_AddTo(
   Polynom       * pP,
   Polynom const * pQ
 ) {
-  if ( pP->n_allocated <= pQ->degree ) {]
+  if ( pP->n_allocated <= pQ->degree ) {
     // re-allocate if necessary
     Polynom_Resize( pP, pQ->degree+1);
   }
@@ -162,6 +170,7 @@ Polynom_AddTo(
     for ( ; i <= pQ->degree; ++i )
       pP->coeffs[i] += pQ->coeffs[i];
   }
+  return 0;
 }
 
 /*!
@@ -172,7 +181,7 @@ Polynom_Axpy(
   real_type       a,
   Polynom const * pQ
 ) {
-  if ( pP->n_allocated <= pQ->degree ) {]
+  if ( pP->n_allocated <= pQ->degree ) {
     // re-allocate if necessary
     Polynom_Resize( pP, pQ->degree+1);
   }
@@ -186,6 +195,7 @@ Polynom_Axpy(
     for ( ; i <= pQ->degree; ++i )
       pP->coeffs[i] += a*pQ->coeffs[i];
   }
+  return 0;
 }
 
 /*!
@@ -197,7 +207,7 @@ Polynom_GAxpy(
   real_type       b,
   Polynom const * pQ
 ) {
-  if ( pP->n_allocated <= pQ->degree ) {]
+  if ( pP->n_allocated <= pQ->degree ) {
     // re-allocate if necessary
     Polynom_Resize( pP, pQ->degree+1);
   }
@@ -211,6 +221,7 @@ Polynom_GAxpy(
     for ( ; i <= pQ->degree; ++i )
       pP->coeffs[i] += a*pP->coeffs[i] + b*pQ->coeffs[i];
   }
+  return 0;
 }
 
 /*!
@@ -222,17 +233,18 @@ Polynom_Multiply(
 ) {
   int_type out_degree = pP->degree * pQ->degree;
   Polynom R;
-  Polynom_New( R, out_degree+1 );
+  Polynom_New( &R, out_degree+1 );
   R.degree = out_degree;
 
   for ( int_type k = 0; k <= out_degree; ++k ) R.coeffs[k] = 0;
 
   for ( int_type i = 0; i <= pP->degree; ++i )
     for ( int_type j = 0; j <= pQ->degree; ++j )
-       R.coeff[i+j] += pP->coeff[i] * pQ->coeff[j];
+       R.coeffs[i+j] += pP->coeffs[i] * pQ->coeffs[j];
 
-  Polynom_Exchange( &R, pQ );
+  Polynom_Exchange( &R, pP );
   Polynom_Delete( &R );
+  return 0;
 }
 
 /*!

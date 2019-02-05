@@ -64,7 +64,7 @@ Polynom_Resize(
 int_type
 Polynom_Exchange(
   Polynom * pP,
-  Polynom * pQ,
+  Polynom * pQ
 );
 
 /*!
