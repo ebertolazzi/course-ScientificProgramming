@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /*
- * Aritmetica dei puntatori
+ * Pointer arithmetic
  *
  */
 
@@ -30,7 +30,9 @@ main() {
    *       +------+
    */
 
-  float  *p1, *p2, *p3 ; /* definisco 3 puntatori a float */
+  float  *p1, *p2, *p3 ; /* define 3 pointers to float */
+
+  printf("sizeof(float*) = %lu\n",sizeof(float*));
 
   p1 = a ; /* p1 ora punta al primo elemento */
   /*            +------+
@@ -109,10 +111,10 @@ main() {
      rappresenta la differenza in celle 
      della dimensione del tipo puntato */
 
-  printf("p2-p3= %d\n",p2-p3) ;
-  printf("reinterpretati come puntatori a char p2-p3= %d\n",
+  printf("p2-p3= %ld\n",p2-p3) ;
+  printf("reinterpretati come puntatori a char p2-p3= %ld\n",
         (char*)p2-(char*)p3) ;
-  printf("reinterpretati come puntatori a double p2-p3= %d\n",
+  printf("reinterpretati come puntatori a double p2-p3= %ld\n",
         (double*)p2-(double*)p3) ;
 
   /* 

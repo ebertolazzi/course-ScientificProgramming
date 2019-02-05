@@ -48,7 +48,7 @@ main() {
   int i ;
   /* voglio costruire il vettore b che contiene
    * all'i-esima posizione
-   *  
+   *
    * b[i] = a[i+1]-a[i]
    *
    */
