@@ -45,27 +45,35 @@ typedef struct {
 
 // use DOXYGEN structured comments
 /*!
+  Initialize a polynomial "object" (no allocation)
+  \param pP pointer variable which store the polynom
+\*/
+int_type
+Polynom_Init( Polynom * pP );
+
+/*!
   Allocate memory for the polynomial
   \param pP          pointer variable which store the polynom
   \param n_allocated how many coeffs are allocated
 \*/
 int_type
-Polynom_New(
-  Polynom * pP,
-  int_type  n_allocated
-);
+Polynom_New( Polynom * pP, int_type  n_allocated );
 
+/*!
+  Re-allocate memory for the polynomial
+  \param pP          pointer variable which store the polynom
+  \param n_allocated how many coeffs are allocated
+\*/
 int_type
-Polynom_Resize(
-  Polynom * pP,
-  int_type  n_allocated
-);
+Polynom_Resize( Polynom * pP, int_type  n_allocated );
 
+/*!
+  Exchange the polynomial P and Q
+  \param pP  pointer variable which store the polynom
+  \param pQ  pointer variable which store the polynom
+\*/
 int_type
-Polynom_Exchange(
-  Polynom * pP,
-  Polynom * pQ
-);
+Polynom_Swap( Polynom * pP, Polynom * pQ );
 
 /*!
   Destroy the polynomial by freeing memory
