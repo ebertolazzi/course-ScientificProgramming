@@ -6,6 +6,8 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include <math.h>
+#include <float.h>
 
 int_type
 Polynom_Init( Polynom * pP ) {
@@ -23,6 +25,51 @@ Polynom_New( Polynom * pP, int_type n_allocated ) {
   pP->coeffs      = calloc( n_allocated, sizeof(real_type) );
   // check memory allocation
   if ( pP->coeffs == NULL ) return -2;
+  return 0;
+}
+
+/*!
+
+\*/
+int_type
+Polynom_Normalize( Polynom * pP, real_type * scale_factor ) {
+  // search max module coeff
+  int_type  ok = 0;
+  real_type mv = 0;
+  for ( int_type i = 0; i <= pP->degree; ++i ) {
+    real_type absi = fabs( pP->coeffs[i] );
+    if ( mv < absi ) mv = absi;
+  }
+  *scale_factor = mv ;
+  if ( mv == 0 ) {
+    ok         = -1;
+    pP->degree = -1;
+  } else {
+    for ( int_type i = 0; i <= pP->degree; ++i )
+      pP->coeffs[i] /= mv;
+  }
+  return ok;
+}
+
+/*!
+
+\*/
+int_type
+Polynom_Purge( Polynom * pP, real_type epsi ) {
+  for ( int_type i = 0; i <= pP->degree; ++i ) {
+    real_type absi = fabs( pP->coeffs[i] );
+    if ( absi <= epsi ) pP->coeffs[i] = 0;
+  }
+  return Polynom_AdjustDegree( pP );
+}
+
+/*!
+
+\*/
+int_type
+Polynom_AdjustDegree( Polynom * pP ) {
+  while ( pP->degree >= 0 && pP->coeffs[pP->degree] == 0 )
+    --pP->degree;
   return 0;
 }
 
@@ -61,7 +108,7 @@ int_type
 Polynom_Delete( Polynom * pP ) {
   if ( pP->coeffs != NULL ) { // avoid double free
     free( pP->coeffs );
-    pP->coeffs      = NULL;
+    pP->coeffs = NULL;
   }
   pP->n_allocated = 0;
   pP->degree      = -1; // degree of nothing is -1
@@ -80,12 +127,10 @@ Polynom_Set(
   if ( degree < pP->n_allocated ) {
     for ( i = 0; i <= degree; ++i ) pP->coeffs[i] = cfs[i];
     // adjust the degree to the true degree
-    while ( pP->coeffs[degree] == 0 && degree >= 0 ) --degree;
     pP->degree = degree;
-  } else {
-    return -1;
+    return Polynom_AdjustDegree( pP );
   }
-  return 0;
+  return -1;
 }
 
 int_type
@@ -131,7 +176,7 @@ Polynom_Print( Polynom const * pP, FILE * fd ) {
 /*!
 \*/
 int_type
-Polynom_Assign( Polynom * pP, Polynom const * pQ ) {
+Polynom_Copy( Polynom * pP, Polynom const * pQ ) {
   if ( pP->n_allocated <= pQ->degree ) {
     // re-allocate if necessary
     Polynom_Resize( pP, pQ->degree+1);
@@ -227,26 +272,40 @@ Polynom_GAxpy(
 \*/
 int_type
 Polynom_Multiply(
-  Polynom       * pP,
+  Polynom       * pR,
+  Polynom const * pP,
   Polynom const * pQ
 ) {
-  int_type out_degree = pP->degree + pQ->degree;
-  Polynom R;
-  Polynom_New( &R, out_degree+1 );
-  R.degree = out_degree;
+  pR->degree = pP->degree + pQ->degree;
+  Polynom_New( pR, pR->degree+1 );
 
-  for ( int_type k = 0; k <= out_degree; ++k ) R.coeffs[k] = 0;
+  for ( int_type k = 0; k <= pR->degree; ++k )
+    pR->coeffs[k] = 0;
 
   for ( int_type i = 0; i <= pP->degree; ++i )
     for ( int_type j = 0; j <= pQ->degree; ++j )
-       R.coeffs[i+j] += pP->coeffs[i] * pQ->coeffs[j];
+       pR->coeffs[i+j] += pP->coeffs[i] * pQ->coeffs[j];
 
+  return 0;
+}
+/*!
+\*/
+int_type
+Polynom_MultiplyTo(
+  Polynom       * pP,
+  Polynom const * pQ
+) {
+  Polynom R;
+  Polynom_Init( &R );
+  int_type ok = Polynom_Multiply( &R, pP, pQ );
   Polynom_Swap( &R, pP );
   Polynom_Delete( &R );
-  return 0;
+  return ok;
 }
 
 /*!
+
+  sa * P(x) = sb * Q(x) * M(x) + R(x)
 \*/
 int_type
 Polynom_Division(
@@ -256,28 +315,47 @@ Polynom_Division(
   Polynom       * pR
 ) {
   int_type ok;
-  Polynom M, R;
-  ok = Polynom_New( &R, pP->degree+1 );
+  real_type scaleP, scaleQ, scaleR;
+  Polynom P, Q, M, R;
+  Polynom_Init( &P );
+  Polynom_Init( &Q );
+  ok |= Polynom_Copy( &P, pP );
+  ok |= Polynom_Copy( &Q, pQ );
+  ok |= Polynom_Normalize( &P, &scaleP ); // p(x) <-P(x)/scaleP
+  ok |= Polynom_Normalize( &Q, &scaleQ ); // q(x) <-Q(x)/scaleQ
+  ok = Polynom_New( &R, P.degree+1 );
   if ( ok != 0 ) return -1;
-  ok = Polynom_Assign( &R, pP );
+  ok = Polynom_Copy( &R, &P );
   if ( ok != 0 ) return -2;
-  ok = Polynom_New( &M, pP->degree-pQ->degree+1 );
+  ok = Polynom_New( &M, P.degree-Q.degree+1 );
   if ( ok != 0 ) return -3;
-  M.degree = pP->degree-pQ->degree;
-  real_type lcQ = pQ->coeffs[pQ->degree];
-  int_type  dd  = R.degree - pQ->degree;
+  M.degree = P.degree-Q.degree;
+  real_type lcQ = Q.coeffs[Q.degree];
+  int_type  dd  = R.degree - Q.degree;
   while ( dd >= 0 ) {
     real_type lcR = R.coeffs[R.degree];
     real_type bf  = lcR/lcQ;
     M.coeffs[dd]  = bf;
-    for ( int_type j = 0; j < pQ->degree; ++j )
-      R.coeffs[dd+j] -= bf * pQ->coeffs[j];
+    for ( int_type j = 0; j < Q.degree; ++j )
+      R.coeffs[dd+j] -= bf * Q.coeffs[j];
     --R.degree;
     --dd;
   }
-  ok = Polynom_Assign( pM, &M );
+  // adjust degree or remainder
+  Polynom_Purge( &R, 100*DBL_EPSILON );
+  Polynom_AdjustDegree( &R );
+
+  // scale back polinomials
+  // p(x) = q(x)*M(x)+r(x)/scaleR
+  // P(x)/scaleP = Q(x)/scaleQ*M(x)+r(x)/scaleR
+  // P(x) = Q(x)*(scaleP/scaleQ)*M(x)+R(x)*(scaleP/scaleR)
+
+  Polynom_ScalarMultiply( &M, scaleP/scaleQ );
+  Polynom_ScalarMultiply( &R, scaleP );
+
+  ok = Polynom_Copy( pM, &M );
   if ( ok != 0 ) return -4;
-  ok = Polynom_Assign( pR, &R );
+  ok = Polynom_Copy( pR, &R );
   if ( ok != 0 ) return -5;
   return 0;
 }
@@ -292,4 +370,42 @@ Polynom_Derivative( Polynom const * pP, Polynom * pDP ) {
   for ( int_type k = 1; k <= pP->degree; ++k )
     pDP->coeffs[k-1] = pP->coeffs[k]*k;
   return 0;
+}
+
+/*!
+  Given P(x) Q(x) compute G.C.D
+\*/
+
+int_type
+Polynom_GCD(
+  Polynom const * pP,
+  Polynom const * pQ,
+  Polynom       * pGCD
+) {
+  real_type dummy;
+  Polynom M, R;
+  int_type ok;
+  Polynom const * pPP = pP->degree >= pQ->degree ? pP : pQ ;
+  Polynom const * pQQ = pP->degree < pQ->degree ? pP : pQ ;
+
+  Polynom_Init(&M);
+  Polynom_Init(&R);
+  ok = Polynom_Division( pPP, pQQ, &M, &R );
+  //printf("\n\n\nPASSA GCD\n");
+  //printf( "P = "); Polynom_Print( pPP, stdout );
+  //printf( "Q = "); Polynom_Print( pQQ, stdout );
+  //printf( "M = "); Polynom_Print( &M, stdout );
+  //printf( "R = "); Polynom_Print( &R, stdout );
+
+  if ( R.degree >= 0 ) {
+    ok |= Polynom_GCD( pQQ, &R, pGCD );
+  } else {
+    ok |= Polynom_Copy( pGCD, pQQ );
+  }
+
+  ok |= Polynom_Normalize( pGCD, &dummy );
+
+  Polynom_Delete( &M );
+  Polynom_Delete( &R );
+  return ok;
 }

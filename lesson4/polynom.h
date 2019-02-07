@@ -57,7 +57,7 @@ Polynom_Init( Polynom * pP );
   \param n_allocated how many coeffs are allocated
 \*/
 int_type
-Polynom_New( Polynom * pP, int_type  n_allocated );
+Polynom_New( Polynom * pP, int_type n_allocated );
 
 /*!
   Re-allocate memory for the polynomial
@@ -65,7 +65,7 @@ Polynom_New( Polynom * pP, int_type  n_allocated );
   \param n_allocated how many coeffs are allocated
 \*/
 int_type
-Polynom_Resize( Polynom * pP, int_type  n_allocated );
+Polynom_Resize( Polynom * pP, int_type n_allocated );
 
 /*!
   Exchange the polynomial P and Q
@@ -81,6 +81,24 @@ Polynom_Swap( Polynom * pP, Polynom * pQ );
 \*/
 int_type
 Polynom_Delete( Polynom * pP );
+
+/*!
+
+\*/
+int_type
+Polynom_Normalize( Polynom * pP, real_type * scale_factor );
+
+/*!
+
+\*/
+int_type
+Polynom_Purge( Polynom * pP, real_type epsi );
+
+/*!
+
+\*/
+int_type
+Polynom_AdjustDegree( Polynom * pP );
 
 /*!
 \*/
@@ -106,7 +124,7 @@ Polynom_Print(
 /*!
 \*/
 int_type
-Polynom_Assign(
+Polynom_Copy(
   Polynom       * pP,
   Polynom const * pQ
 );
@@ -117,6 +135,29 @@ int_type
 Polynom_ScalarMultiply(
   Polynom * pP,
   real_type a
+);
+
+/*!
+ Sum two polynonials
+\*/
+int_type
+Polynom_Add(
+  Polynom       * pR,
+  Polynom const * pP,
+  Polynom const * pQ
+);
+
+/*!
+ Sum two polynonials
+ R(x) = a*P(x) + b*Q(x)
+\*/
+int_type
+Polynom_GAdd(
+  Polynom       * pR,
+  real_type       a,
+  Polynom const * pP,
+  real_type       b,
+  Polynom const * pQ
 );
 
 /*!
@@ -137,6 +178,7 @@ Polynom_Axpy(
 );
 
 /*!
+ P(x) = a*P(x) + b*Q(x)
 \*/
 int_type
 Polynom_GAxpy(
@@ -147,14 +189,26 @@ Polynom_GAxpy(
 );
 
 /*!
+  R(x) = P(x)*Q(x)
 \*/
 int_type
 Polynom_Multiply(
+  Polynom       * pR,
+  Polynom const * pP,
+  Polynom const * pQ
+);
+
+/*!
+  P(x) = P(x)*Q(x)
+\*/
+int_type
+Polynom_MultiplyTo(
   Polynom       * pP,
   Polynom const * pQ
 );
 
 /*!
+  P(x)/Q(x) -->  P(x) = Q(x)*M(x) + R(x)
 \*/
 int_type
 Polynom_Division(
@@ -165,11 +219,37 @@ Polynom_Division(
 );
 
 /*!
+  R(x) = P'(x)
 \*/
 int_type
 Polynom_Derivative(
   Polynom const * pP,
-  Polynom       * pDP
+  Polynom       * pR
 );
+
+/*!
+  Given P(x) Q(x) compute G.C.D
+\*/
+int_type
+Polynom_GCD(
+  Polynom const * pP,
+  Polynom const * pQ,
+  Polynom       * pGCD
+);
+
+/*!
+  Given P(x) Q(x) compute G.C.D
+\*/
+int_type
+Polynom_STURM(
+  Polynom const * pP,
+  Polynom         STURM[]
+);
+
+/*!
+  Given P(x) Q(x) compute G.C.D
+\*/
+int_type
+Polynom_SIGN_VARIATION( Polynom STURM[] );
 
 #endif
