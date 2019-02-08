@@ -79,7 +79,9 @@ namespace Polynoms {
     void
     free() {
       if ( this->coeffs != nullptr ) delete [] this->coeffs;
-      this->coeffs = nullptr; // useless
+      this->coeffs      = nullptr; // useless
+      this->n_allocated = 0;
+      this->degree      = -1;
     }
 
     void
@@ -151,6 +153,12 @@ namespace Polynoms {
     ~Polynom() {
       DEBUG_MESSAGE("~Polynom()");
       this->free();
+    }
+
+    Polynom &
+    clear() {
+      this->degree = -1;
+      return *this;
     }
 
     void
@@ -275,9 +283,86 @@ namespace Polynoms {
       return *this;
     }
 
-    // dp(x) = p'(x) where p(x) is the "internal polynomial"
-    void derivative( Polynom & dp ) const ;
+    // unary -p
+    Polynom operator - () {
+      Polynom tmp(*this);
+      return (tmp *= -1);
+    }
 
+    real_type
+    eval( real_type x ) const {
+      if ( this->degree >= 0 ) {
+        int_type  j   = this->degree;
+        real_type res = this->coeffs[this->degree];
+        while ( --j >= 0 ) res = x * res + this->coeffs[j];
+        return res;
+      } else {
+        return 0;
+      }
+    }
+
+    // dp(x) = p'(x) where p(x) is the "internal polynomial"
+    Polynom
+    derivative() const {
+      Polynom dp;
+      dp.setup( this->degree-1 );
+      for ( int_type k = 1; k <= this->degree; ++k )
+        dp.coeffs[k-1] = this->coeffs[k]*k;
+      return dp;
+    }
+
+    friend class Sturm;
+  };
+
+  class Sturm {
+    int_type  npoly;
+    int_type  n_allocated;
+    Polynom * sturm;
+
+    void
+    allocate( int_type n ) {
+      if ( this->n_allocated < n ) {
+        this->free();
+        this->n_allocated = n;
+        this->sturm       = new Polynom[n];
+        this->npoly       = 0;
+      }
+    }
+
+    void
+    free() {
+      if ( this->sturm != nullptr ) delete [] this->sturm;
+      this->sturm       = nullptr; // useless
+      this->n_allocated = 0;
+      this->npoly       = 0;
+    }
+
+  public:
+
+    Sturm()
+    : npoly(0)
+    , n_allocated(0)
+    , sturm(nullptr)
+    {}
+
+    Sturm( Polynom const & P )
+    : npoly(0)
+    , n_allocated(0)
+    , sturm(nullptr)
+    { this->build(P); }
+
+    ~Sturm()
+    { free(); }
+
+    void
+    build( Polynom const & P );
+
+    int_type
+    sign_changes( real_type x ) const;
+
+    // now operator << can access private data
+    friend
+    ostream& operator << ( ostream & stream, Sturm const & p );
   };
 }
 

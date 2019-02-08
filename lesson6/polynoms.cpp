@@ -5,34 +5,6 @@
 
 namespace Polynoms {
 
-  real_type
-  Polynom::normalize() {
-    real_type scale_factor = 0;
-    if ( this ->degree >= 0 ) {
-      for ( int_type i = 0; i <= this->degree; ++i ) {
-        real_type absi = std::abs( this->coeffs[i] );
-        if ( scale_factor < absi ) scale_factor = absi;
-      }
-      if ( scale_factor == 0 ) {
-        this ->degree = -1;
-      } else {
-        for ( int_type i = 0; i <= this->degree; ++i )
-          this->coeffs[i] /= scale_factor;
-      }
-    }
-    return scale_factor;
-  }
-
-  Polynom &
-  Polynom::purge( real_type epsi ) {
-    for ( int_type i = 0; i <= this->degree; ++i ) {
-      real_type absi = std::abs( this->coeffs[i] );
-      if ( absi <= epsi ) this->coeffs[i] = 0;
-    }
-    this->adjustDegree();
-    return *this;
-  }
-
   // extend the ostream class for printing the polynomial
   ostream&
   operator << ( ostream & stream, Polynom const & p ) {
@@ -72,6 +44,41 @@ namespace Polynoms {
       if ( i > 1 ) stream << "^" << i;
     }
     return stream;
+  }
+
+  ostream&
+  operator << ( ostream & stream, Sturm const & p ) {
+    for ( int_type i = 0; i <= p.npoly; ++i )
+      stream << "S[" << i << "] = " << p.sturm[i] << '\n';
+    return stream;
+  }
+
+  real_type
+  Polynom::normalize() {
+    real_type scale_factor = 0;
+    if ( this ->degree >= 0 ) {
+      for ( int_type i = 0; i <= this->degree; ++i ) {
+        real_type absi = std::abs( this->coeffs[i] );
+        if ( scale_factor < absi ) scale_factor = absi;
+      }
+      if ( scale_factor == 0 ) {
+        this ->degree = -1;
+      } else {
+        for ( int_type i = 0; i <= this->degree; ++i )
+          this->coeffs[i] /= scale_factor;
+      }
+    }
+    return scale_factor;
+  }
+
+  Polynom &
+  Polynom::purge( real_type epsi ) {
+    for ( int_type i = 0; i <= this->degree; ++i ) {
+      real_type absi = std::abs( this->coeffs[i] );
+      if ( absi <= epsi ) this->coeffs[i] = 0;
+    }
+    this->adjustDegree();
+    return *this;
   }
 
   Polynom
@@ -141,5 +148,56 @@ namespace Polynoms {
     r = (R *= scaleP);
   }
 
+  /*
+
+   build sturm sequence
+
+  */
+  void
+  Sturm::build( Polynom const & P ) {
+    Polynom M, R;
+
+    this->allocate( P.degree+1 );
+    sturm[0] = P;
+    sturm[1] = P.derivative();
+    npoly = 1;
+    while ( true ) {
+      division( sturm[npoly-1], sturm[npoly], M, R );
+      if ( R.degree >= 0 ) {
+        sturm[++npoly] = -R;
+      } else {
+        break;
+      }
+    }
+
+    // divide by GCD
+    for ( int_type i=0; i <= npoly; ++i ) {
+      division( sturm[i], sturm[npoly], M, R );
+      M.normalize();
+      sturm[i] = M;
+    }
+  }
+
+  /*
+
+  compute sign changed on the sequence
+
+  */
+  int_type
+  Sturm::sign_changes( real_type x ) const {
+    int_type sign_var  = 0;
+    int_type last_sign = 0;
+    for ( int_type i = 0; i <= this->npoly; ++i ) {
+      real_type v = this->sturm[i].eval( x );
+      if ( v > 0 ) {
+        if ( last_sign == -1 ) ++sign_var;
+        last_sign = 1;
+      } else if ( v < 0 ) {
+        if ( last_sign == 1 ) ++sign_var;
+        last_sign = -1;
+      }
+    }
+    return sign_var;
+  }
 
 }
