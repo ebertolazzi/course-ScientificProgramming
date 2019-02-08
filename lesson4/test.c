@@ -23,24 +23,17 @@ main() {
   ok = Polynom_Init( &M );        printf("Polynom_Init( &M ) ok = %d\n",ok);
   ok = Polynom_Init( &DP );       printf("Polynom_Init( &DP ) ok = %d\n",ok);
 
-  printf("P = ");
-  Polynom_Print( &P, stdout );
-
-  printf("Q = ");
-  Polynom_Print( &Q, stdout );
+  Polynom_Print( "P = ", &P, "\n", stdout );
+  Polynom_Print( "Q = ", &Q, "\n", stdout );
 
   ok = Polynom_Division( &P, &Q, &M, &R ); printf("Polynom_Division( &P, &Q, &M, &R ) ok = %d\n",ok);
 
-  printf("R = ");
-  Polynom_Print( &R, stdout );
-
-  printf("M = ");
-  Polynom_Print( &M, stdout );
+  Polynom_Print( "R = ", &R, "\n", stdout );
+  Polynom_Print( "M = ", &M, "\n", stdout );
 
   ok = Polynom_Derivative( &P, &DP ); printf("Polynom_Derivative( &P, &DP ); ok = %d\n",ok);
 
-  printf("P' = ");
-  Polynom_Print( &DP, stdout );
+  Polynom_Print( "P' = ", &DP, "\n", stdout );
 
   return 0;
 }

@@ -101,6 +101,12 @@ int_type
 Polynom_AdjustDegree( Polynom * pP );
 
 /*!
+
+\*/
+real_type
+Polynom_Eval( Polynom * pP, real_type x );
+
+/*!
 \*/
 int_type
 Polynom_Set(
@@ -117,7 +123,9 @@ Polynom_Set(
 \*/
 int_type
 Polynom_Print(
+  char    const   begin[],
   Polynom const * pP,
+  char    const   end[],
   FILE          * fd
 );
 
@@ -136,6 +144,11 @@ Polynom_ScalarMultiply(
   Polynom * pP,
   real_type a
 );
+
+/*!
+\*/
+int_type
+Polynom_Negate( Polynom * pP );
 
 /*!
  Sum two polynonials
@@ -243,13 +256,14 @@ Polynom_GCD(
 int_type
 Polynom_STURM(
   Polynom const * pP,
-  Polynom         STURM[]
+  Polynom         STURM[],
+  int_type      * npoly
 );
 
 /*!
   Given P(x) Q(x) compute G.C.D
 \*/
 int_type
-Polynom_SIGN_VARIATION( Polynom STURM[] );
+Polynom_SIGN_VARIATION( real_type x, Polynom STURM[], int_type ns );
 
 #endif

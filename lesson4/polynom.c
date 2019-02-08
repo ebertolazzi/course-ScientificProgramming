@@ -73,6 +73,17 @@ Polynom_AdjustDegree( Polynom * pP ) {
   return 0;
 }
 
+/*!
+
+\*/
+real_type
+Polynom_Eval( Polynom * pP, real_type x ) {
+  int_type  j   = pP->degree;
+  real_type res = pP->coeffs[pP->degree];
+  while ( --j >= 0 ) res = x * res + pP->coeffs[j];
+  return res;
+}
+
 int_type
 Polynom_Resize( Polynom * pP, int_type  n_allocated ) {
   if ( n_allocated <= pP->degree ) return -1;
@@ -134,42 +145,50 @@ Polynom_Set(
 }
 
 int_type
-Polynom_Print( Polynom const * pP, FILE * fd ) {
-  if ( pP->degree < 0 ) return -1;
-
-  char const *fmt[] = {
-    "%g",
-    "%g * x",
-    "%g * x^%d"
-  };
-  int_type k = pP->degree; if ( pP->degree > 2 ) k = 2;
-  real_type c = pP->coeffs[pP->degree];
-
-  if ( ( c == 1 || c == -1 ) && k > 0 ) {
-    if ( c < 0 ) fprintf( fd, "- " );
-    fprintf( fd, fmt[k]+5, pP->degree );
+Polynom_Print(
+  char    const   begin[],
+  Polynom const * pP,
+  char    const   end[],
+  FILE          * fd
+) {
+  fprintf( fd, "%s", begin);
+  if ( pP->degree < 0 ) {
+    fprintf( fd, "0" );
   } else {
-    fprintf( fd, fmt[k], c, pP->degree );
-  }
+    char const *fmt[] = {
+      "%g",
+      "%g * x",
+      "%g * x^%d"
+    };
+    int_type k = pP->degree; if ( pP->degree > 2 ) k = 2;
+    real_type c = pP->coeffs[pP->degree];
 
-  for ( int_type i=pP->degree-1; i >= 0; --i ) {
-    c = pP->coeffs[i];
-    if ( c < 0 ) {
-      fprintf( fd, " - " );
-      c = -c;
-    } else if ( c > 0 ) {
-      fprintf( fd, " + " );
+    if ( ( c == 1 || c == -1 ) && k > 0 ) {
+      if ( c < 0 ) fprintf( fd, "- " );
+      fprintf( fd, fmt[k]+5, pP->degree );
     } else {
-      continue; // print nothing
+      fprintf( fd, fmt[k], c, pP->degree );
     }
-    int_type k = i; if ( i > 2 ) k = 2;
-    if ( c == 1 && k > 0 ) {
-      fprintf( fd, fmt[k]+5, i );
-    } else {
-      fprintf( fd, fmt[k], c, i );
+
+    for ( int_type i=pP->degree-1; i >= 0; --i ) {
+      c = pP->coeffs[i];
+      if ( c < 0 ) {
+        fprintf( fd, " - " );
+        c = -c;
+      } else if ( c > 0 ) {
+        fprintf( fd, " + " );
+      } else {
+        continue; // print nothing
+      }
+      int_type k = i; if ( i > 2 ) k = 2;
+      if ( c == 1 && k > 0 ) {
+        fprintf( fd, fmt[k]+5, i );
+      } else {
+        fprintf( fd, fmt[k], c, i );
+      }
     }
   }
-  fprintf( fd, "\n" );
+  fprintf( fd, "%s", end);
   return 0;
 }
 
@@ -193,6 +212,15 @@ int_type
 Polynom_ScalarMultiply( Polynom * pP, real_type a ) {
   for ( int_type i=0; i <= pP->degree; ++i )
     pP->coeffs[i] *= a;
+  return 0;
+}
+
+/*!
+\*/
+int_type
+Polynom_Negate( Polynom * pP ) {
+  for ( int_type i=0; i <= pP->degree; ++i )
+    pP->coeffs[i] = -pP->coeffs[i];
   return 0;
 }
 
@@ -314,8 +342,8 @@ Polynom_Division(
   Polynom       * pM,
   Polynom       * pR
 ) {
-  int_type ok;
-  real_type scaleP, scaleQ, scaleR;
+  int_type ok = 0;
+  real_type scaleP, scaleQ;
   Polynom P, Q, M, R;
   Polynom_Init( &P );
   Polynom_Init( &Q );
@@ -408,4 +436,80 @@ Polynom_GCD(
   Polynom_Delete( &M );
   Polynom_Delete( &R );
   return ok;
+}
+
+/*!
+  Given P(x) Q(x) compute G.C.D
+\*/
+int_type
+Polynom_STURM(
+  Polynom const * pP,
+  Polynom         STURM[],
+  int_type      * npoly
+) {
+  int_type ok = 0;
+  Polynom DP, M, R;
+  ok =  Polynom_Init( &DP );
+  ok |= Polynom_Init( &M );
+  ok |= Polynom_Init( &R );
+  if ( ok != 0 ) return -1;
+  ok = Polynom_Derivative( pP, &DP );
+  if ( ok != 0 ) return -2;
+
+  //Polynom_Print( "P  = ", pP,  "\n", stdout );
+  //Polynom_Print( "DP = ", &DP, "\n", stdout );
+
+  Polynom_Init( &STURM[0] ); Polynom_Copy( &STURM[0], pP );
+  Polynom_Init( &STURM[1] ); Polynom_Copy( &STURM[1], &DP );
+  int_type ns = 1;
+  while ( 1 ) {
+    ok = Polynom_Division( &STURM[ns-1], &STURM[ns], &M, &R );
+    //Polynom_Print( "M = ", &M, "\n", stdout );
+    if ( R.degree >= 0 ) {
+      ++ns;
+      Polynom_Init( &STURM[ns] );
+      Polynom_Copy( &STURM[ns], &R );
+      Polynom_Negate( &STURM[ns] );
+      //Polynom_Print( "R = ", &R, "\n", stdout );
+    } else {
+      break;
+    }
+  }
+  // divide by MCD
+  for ( int_type i=0; i <= ns; ++i ) {
+    real_type dummy;
+    ok = Polynom_Division( &STURM[i], &STURM[ns], &M, &R );
+    //Polynom_Print( "M = ", &M, "\n", stdout );
+    //Polynom_Print( "R = ", &R, "\n", stdout );
+    Polynom_Copy( &STURM[i], &M );
+    Polynom_Normalize( &STURM[i], &dummy );
+    // Polynom_Print( "S = ", &STURM[i], "\n", stdout );
+  }
+  *npoly = ns;
+  return ok;
+}
+
+/*!
+  Given P(x) Q(x) compute G.C.D
+\*/
+int_type
+Polynom_SIGN_VARIATION(
+  real_type x,
+  Polynom   STURM[],
+  int_type  ns
+) {
+  int_type sign_var  = 0;
+  int_type last_sign = 0;
+  for ( int_type i = 0; i <= ns; ++i ) {
+    real_type v = Polynom_Eval( &STURM[i], x );
+    //printf("v = %g\n", v);
+    if ( v > 0 ) {
+      if ( last_sign == -1 ) ++sign_var;
+      last_sign = 1;
+    } else if ( v < 0 ) {
+      if ( last_sign == 1 ) ++sign_var;
+      last_sign = -1;
+    }
+  }
+  return sign_var;
 }
