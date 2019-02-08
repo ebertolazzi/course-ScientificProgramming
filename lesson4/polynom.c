@@ -475,7 +475,7 @@ Polynom_STURM(
       break;
     }
   }
-  // divide by MCD
+  // divide by GCD
   for ( int_type i=0; i <= ns; ++i ) {
     real_type dummy;
     ok = Polynom_Division( &STURM[i], &STURM[ns], &M, &R );
