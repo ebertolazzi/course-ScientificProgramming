@@ -72,22 +72,19 @@ public:
   
   // first row
 
-      | alpha(0) gamma(0)       0        0        0  |
-      |  beta(0) alpha(1) gamma(1)       0        0  |
-  T = |        0  beta(1) alpha(2) gamma(2)       0  |
-      |        0        0  beta(2) alpha(3) gamma(3) |
-      |        0        0        0  beta(3) alpha(4) |
+      |  1       0              0        0        0  |
+      |  beta(1) alpha(1) gamma(1)       0        0  |
+  T = |        0  beta(2) alpha(2) gamma(2)       0  |
+      |        0        0  beta(3) alpha(3) gamma(3) |
+      |        0        0        0                1  |
   
 
-  b = [ omega[0], omega[1],...., omega[n-2] ]^T ;
+   b = [ omega(1)-beta(1)*ya, omega(2),...., omega(n-1), omega(n)-gamma(n)*yb ]^T ;
 
    alpha(k)   = -2/h^2 + q(x[k+1])
-   beta (k)   = 1/h^2 + p(x[k+2])/(2h)
+   beta (k)   = 1/h^2 + p(x[k+1])/(2h)
    gamma(k)   = 1/h^2 - p(x[k+1])/(2h)
    omega(k)   = r(x[k+1])
-   omega(0)   = r(x[1])-beta[0]*ya
-   omega(N-2) = r(x[N-1])-gamma[N-2]*yb
-
  */
 
   void
@@ -105,47 +102,44 @@ public:
     this->a = a;
     this->b = b;
     this->N = N;
-    this->h = (b-a)/(N+1);
+    this->h = (b-a)/(N-1);
   
     // initialize the vectors
-    int_type n = N-1;
-    alpha . resize(n);
-    beta  . resize(n-1);
-    gamma . resize(n-1);
-    omega . resize(n);
-    v     . resize(n);
-    sol   . resize(n+2);
+    alpha . resize(N);
+    beta  . resize(N);
+    gamma . resize(N);
+    omega . resize(N);
+    v     . resize(N);
+    sol   . resize(N);
 
     // fill the vector alpha and omega
-    for ( int_type k = 0 ; k < n ; ++k ) {
-      real_type xkp1 = this->X(k+1);
-      alpha(k) = -2/(h*h) + this->q(xkp1);
-      omega(k) = this->r(xkp1);
+    int_type n = N-1;
+    for ( int_type k = 0 ; k <= n ; ++k ) {
+      real_type xk = this->X(k);
+      real_type pk = this->p(xk);
+      alpha(k) = -2/(h*h) + this->q(xk);
+      beta(k)  = 1/(h*h) - pk/(2*h);
+      gamma(k) = 1/(h*h) + pk/(2*h);
+      omega(k) = this->r(xk);
     }
-    for ( int_type k = 0 ; k < n-1; ++k ) {
-      // fill the vector beta
-      real_type xkp2 = this->X(k+2);
-      beta(k) = 1/(h*h) + this->p(xkp2)/(2*h);
-      // fill the vector gamma
-      real_type xkp1 = this->X(k+1);
-      gamma(k) = 1/(h*h) - p(xkp1)/(2*h);
-    }
-
-    omega(0)   = this->r(this->X(0))-beta(0)*ya;
-    omega(n-1) = this->r(this->X(n))-gamma(n-2)*yb;
+    alpha(0)  = 1;
+    gamma(0)  = 0;
+    alpha(n)  = 1;
+    beta(n)   = 0;
+    omega(0)  = ya;
+    omega(n)  = yb;
 
     // solve tridiagonal system
     real_type w = alpha(0);
-    sol(0) = ya;
-    sol(N) = yb;
-    sol(1) = omega(0)/w;
-    for ( int_type i=1; i < n; ++i ) {
+    sol(0) = omega(0)/w;
+    for ( int_type i=1; i <= n; ++i ) {
       v(i-1) = gamma(i-1)/w;
-      w      = alpha(i) - beta(i-1)*v(i-1);
-      sol(i+1) = (omega(i) - beta(i-1)*sol(i) )/w;
+      w      = alpha(i) - beta(i)*v(i-1);
+      sol(i) = (omega(i) - beta(i)*sol(i-1) )/w;
     }
-    for ( int_type j=n-2; j >= 0; --j )
-      sol(j+1) -= v(j)*sol(j);
+    for ( int_type j=n-1; j >= 0; --j )
+      sol(j) -= v(j)*sol(j+1);
+
   }
 
   vec const & get_solution() const { return sol; }
@@ -159,7 +153,7 @@ public:
     if ( file.bad() ) throw "error in openeing : result.txt\n" ;
 
     file << "x\ty\n" ;
-    for ( int_type k = 0; k <= N; ++k )
+    for ( int_type k = 0; k < N; ++k )
       file << this->X(k) << "\t" << this->sol(k) << "\n" ;
 
     // close the file
@@ -200,7 +194,7 @@ public:
 
   virtual
   real_type
-  p( real_type x ) const { return x; }
+  p( real_type x ) const { return -x; }
 
   virtual
   real_type
@@ -208,7 +202,7 @@ public:
 
   virtual
   real_type
-  r( real_type x ) const { return x*x;}
+  r( real_type x ) const { return -x*x;}
 };
 
 int
