@@ -113,14 +113,6 @@ mexFunction( int nlhs, mxArray       *plhs[],
     real_type yb = getScalarValue( arg_in_3, CMD "yb expected a real scalar" );
     int64_t   N  = getInt( arg_in_4, CMD "N expected a scalar integer" );
 
-    MEX_ASSERT( mxIsChar(arg_in_5), "P must be a string" );
-    MEX_ASSERT( mxIsChar(arg_in_6), "Q must be a string" );
-    MEX_ASSERT( mxIsChar(arg_in_7), "R must be a string" );
-
-    string P = mxArrayToString(arg_in_5);
-    string Q = mxArrayToString(arg_in_6);
-    string R = mxArrayToString(arg_in_7);
-
     MEX_ASSERT(
       a < b,
       CMD << "bad interval [a = " << a << ", b = " << b << "]"
@@ -171,19 +163,13 @@ mexFunction( int nlhs, mxArray       *plhs[],
       mxArray *args_in[1];
       mxArray *args_out[1];
       setScalarValue( args_in[0], xk );
-      int ok = mexCallMATLAB( 1, args_out, 1, args_in, P.c_str() );
-      MEX_ASSERT( ok == 0, CMD << "failed the call p(" << xk << ")" );
-
+      callMATLAB( 1, args_out, 1, args_in, arg_in_5, CMD );
       real_type pk = getScalarValue( args_out[0], "out P(x) expected a real scalar" );
 
-      ok = mexCallMATLAB( 1, args_out, 1, args_in, Q.c_str() );
-      MEX_ASSERT( ok == 0, CMD << "failed the call q(" << xk << ")" );
-
+      callMATLAB( 1, args_out, 1, args_in, arg_in_6, CMD );
       real_type qk = getScalarValue( args_out[0], "out P(x) expected a real scalar" );
 
-      ok = mexCallMATLAB( 1, args_out, 1, args_in, R.c_str() );
-      MEX_ASSERT( ok == 0, CMD << "failed the call r(" << xk << ")" );
-
+      callMATLAB( 1, args_out, 1, args_in, arg_in_7, CMD );
       real_type rk = getScalarValue( args_out[0], "out P(x) expected a real scalar" );
 
       alpha(k) = -2/(h*h) + qk;

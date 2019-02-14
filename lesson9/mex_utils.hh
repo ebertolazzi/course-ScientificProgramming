@@ -141,6 +141,17 @@ getInt( mxArray const * arg, char const msg[] ) {
 
 static
 inline
+std::string
+getString( mxArray const * arg, char const msg[] ) {
+  MEX_ASSERT(
+    mxIsChar(arg),
+    msg << " must be a string, found: " << mxGetClassName(arg)
+  );
+  return mxArrayToString(arg);
+}
+
+static
+inline
 double const *
 getVectorPointer( mxArray const * arg, mwSize & sz, char const msg[] ) {
   mwSize number_of_dimensions = mxGetNumberOfDimensions(arg);
@@ -215,6 +226,50 @@ createMatrixValue( mxArray * & arg, mwSize nrow, mwSize ncol ) {
 }
 
 // -----------------------------------------------------------------------------
+
+static
+inline
+void
+callMATLAB( int nlhs, mxArray * plhs[],
+            int nrhs, mxArray * prhs[],
+            char const fname[],
+            char const errmsg[] ) {
+  int ok = mexCallMATLAB( nlhs, plhs, nrhs, prhs, fname );
+  MEX_ASSERT( ok == 0, errmsg << "failed the call of MATLAB FUNCTION: " << fname );
+}
+
+static
+inline
+void
+callMATLAB( int nlhs, mxArray * plhs[],
+            int nrhs, mxArray * prhs[],
+            mxArray const * pfun,
+            char const errmsg[] ) {
+  mxClassID category = mxGetClassID(pfun);
+  int ok = 0;
+  switch (category)  {
+  case mxCHAR_CLASS:
+    ok = mexCallMATLAB( nlhs, plhs, nrhs, prhs, mxArrayToString(pfun) );
+    break;
+  case mxFUNCTION_CLASS:
+    {
+      // mxIsClass( prhs[0] , "function_handle")
+      mxArray * pprhs[nrhs+1];
+      pprhs[0] = const_cast<mxArray *>(pfun);
+      for ( int i = 1; i <= nrhs; ++i ) pprhs[i] = prhs[i-1];
+      ok = mexCallMATLAB(nlhs,plhs,nrhs+1,pprhs,"feval");
+    }
+    break;
+  default:
+    MEX_ASSERT(
+      false,
+      errmsg << "callMATLAB can use string or function_handle, found: "  <<
+      mxGetClassName(pfun)
+    );
+    break;
+  }
+  MEX_ASSERT( ok == 0, errmsg << "failed the call of MATLAB function_handle" );
+}
 
 /*
   Class Handle by Oliver Woodford
