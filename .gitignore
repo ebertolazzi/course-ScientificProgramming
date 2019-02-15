@@ -1,6 +1,6 @@
 a.out
-lesson3/.vscode
 *.o
 *.s
-lesson7/.vscode
-lesson9/.vscode
+*.mexmaci64
+.vscode
+Xcode
