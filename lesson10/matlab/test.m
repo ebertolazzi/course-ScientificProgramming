@@ -1,3 +1,4 @@
+addpath('../src_mex');
 cs = CubicSegment2();
 p0 = [1,0];
 p1 = [2,0];
