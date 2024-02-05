@@ -4,11 +4,11 @@
 
 */
 
-#include "sodoku.hh"
+#include "sudoku.hh"
 
 #include <fstream>
 
-namespace Sodoku {
+namespace Sudoku {
 
   static
   int

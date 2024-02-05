@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.0)
-project(Sodoku)
+project(Sudoku)
 
 # add the data to the target, so it becomes visible in some IDE
-add_executable( Sodoku Sodoku_main.cc Sodoku_read.cc Sodoku_write.cc Sodoku_solve.cc )
+add_executable( Sudoku Sudoku_main.cc Sudoku_read.cc Sudoku_write.cc Sudoku_solve.cc )
 
-set_target_properties( Sodoku PROPERTIES CXX_STANDARD 11 CXX_EXTENSIONS off )
+set_target_properties( Sudoku PROPERTIES CXX_STANDARD 11 CXX_EXTENSIONS off )
 
 #
 # to generate a makefile use

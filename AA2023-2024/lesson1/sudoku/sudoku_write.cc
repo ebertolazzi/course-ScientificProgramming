@@ -4,9 +4,9 @@
 
 */
 
-#include "sodoku.hh"
+#include "sudoku.hh"
 
-namespace Sodoku {
+namespace Sudoku {
 
 
   static

@@ -4,9 +4,9 @@
 
 */
 
-#include "sodoku.hh"
+#include "sudoku.hh"
 
-namespace Sodoku {
+namespace Sudoku {
 
   void
   solve( int table[9][9] ) {

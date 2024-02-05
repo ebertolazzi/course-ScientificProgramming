@@ -4,9 +4,9 @@
 
 */
 
-#include "sodoku.hh"
+#include "sudoku.hh"
 
-namespace Sodoku {
+namespace Sudoku {
 
   static std::string top_left     = "\u250F";
   static std::string top_right    = "\u2513";
