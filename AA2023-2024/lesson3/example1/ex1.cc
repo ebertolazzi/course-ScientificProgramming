@@ -3,13 +3,16 @@ example of ineheritance in C++11
 
 */
 
+// standard header for I/O
 #include <iostream>
+
+// standard header C++ strings
 #include <string>
 
 // for timing
 #include <chrono>
 
-// for sleep_for
+// for thread and in particular the function sleep_for
 #include <thread>
 
 /*
