@@ -5,4 +5,5 @@ a.out
 .vscode
 Xcode
 /**/build
-CMakeFiles/
+/**/CMakeFiles
+CMakeCache.txt
