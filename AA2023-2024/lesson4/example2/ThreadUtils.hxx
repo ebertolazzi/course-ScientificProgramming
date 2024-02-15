@@ -21,6 +21,9 @@
 /// eof: ThreadUtils.hxx
 ///
 
+#include <vector>
+#include <functional>
+#include <atomic>
 #include <thread>
 #include <mutex>
 #include <condition_variable>
