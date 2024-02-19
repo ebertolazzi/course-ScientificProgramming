@@ -9,11 +9,9 @@ endif()
 
 add_executable(block_multiplication block_multiplication.cpp ThreadPool1.cc ThreadUtils.cc )
 
-set_target_properties(block_multiplication PROPERTIES
-    CXX_STANDARD 11
-    CXX_STANDARD_REQUIRED ON
-    CXX_EXTENSIONS OFF
-)
+set( CXX_STANDARD 11 )
+set( CXX_STANDARD_REQUIRED ON )
+set( CXX_EXTENSIONS OFF )
 
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
