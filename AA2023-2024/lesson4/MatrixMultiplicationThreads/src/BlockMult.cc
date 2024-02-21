@@ -2,125 +2,138 @@
 
 #define TH_POOL 1
 
-//-----------------------------------------------------
+namespace BlockMult {
 
-BlockMult::BlockMult()
-: pool{12}
-{
-}
+  //-----------------------------------------------------
 
-//-----------------------------------------------------
-
-BlockMult::BlockMult(
-  Eigen::MatrixXd const & A,
-  Eigen::MatrixXd const & B,
-  Eigen::MatrixXd       & C,
-  int                     n,
-  int                     m,
-  int                     p
-) : pool{12}
-{
-  //
-  multiply(A,B,C,n,m,p);
-  //
-  return;
-}
-
-//-----------------------------------------------------
-
-BlockMult::~BlockMult()
-{
-}
-
-//-----------------------------------------------------
-
-void
-BlockMult::multiply(
-  Eigen::MatrixXd const & A,
-  Eigen::MatrixXd const & B,
-  Eigen::MatrixXd       & C,
-  int                     n,
-  int                     m,
-  int                     p
-)
-{
-  //
-  if(!checkValidity(A,B,C))
+  BlockMult::BlockMult()
+  : BS_pool{12}
+  , TN_pool{12}
   {
-    std::cerr << "Invalid matrix multiplication!!!" << std::endl;
-    return;
   }
-  //
-  #ifndef UNITN
-  std::vector<std::future<void>> futures;
-  #endif
-  //
-  for(int i = 0; i < C.rows() / n; i++) {
-    for(int j = 0; j < C.cols() / m; j++) {
-      #if TH_POOL
-      #ifndef UNITN
-      futures.push_back(
-        pool.submit_task(
-          [this, &A, &B, &C, n, m, p, i, j](){this->ComputeCBlock( A, B, C, n, m, p, i, j);})
-        );
-      #else
-      pool.run(
-        [this, &A, &B, &C, n, m, p, i, j](){this->ComputeCBlock( A, B, C, n, m, p, i, j);}
-      );
-      //pool.run( &BlockMult::ComputeCBlock, this, A, B, C, n, m, p, i, j );
-      #endif
-      #else
-      ComputeCBlock( A, B, C, n, m, p, i, j);
-      #endif
+
+  //-----------------------------------------------------
+
+  BlockMult::~BlockMult() {}
+
+  //-----------------------------------------------------
+
+  bool
+  BlockMult::multiply(
+    mat const & A,
+    mat const & B,
+    mat       & C,
+    integer     n,
+    integer     m,
+    integer     p
+  ) {
+
+    if ( A.cols() != B.rows())  {
+      std::cerr << "Invalid matrix multiplication. Found " << A.cols() << "x" << A.rows() << " Times " << B.cols() << "x" << B.rows() << std::endl;
+      return false;
+    }
+    // get dimensions
+    integer N{A.rows()};
+    integer M{B.cols()};
+    integer P{A.cols()};
+
+    if ( n > N )  {
+      std::cerr << "Invalid matrix multiplication. Found n = " << n << " > N " << N << std::endl;
+      return false;
+    }
+    if ( m > M )  {
+      std::cerr << "Invalid matrix multiplication. Found m = " << m << " > M " << M << std::endl;
+      return false;
+    }
+    if ( p > P )  {
+      std::cerr << "Invalid matrix multiplication. Found p = " << p << " > P " << P << std::endl;
+      return false;
+    }
+
+    i_block.clear(); i_block.reserve(n+1); i_block.emplace_back(0);
+    k_block.clear(); k_block.reserve(p+1); k_block.emplace_back(0);
+    j_block.clear(); j_block.reserve(m+1); j_block.emplace_back(0);
+
+    {
+      int dn{int(N/n)};
+      while ( i_block.back() < N )
+        i_block.emplace_back( i_block.back() + dn );
+      i_block.back() = N;
+    }
+
+    {
+      int dm{int(M/m)};
+      while ( j_block.back() < M )
+        j_block.emplace_back( j_block.back() + dm );
+      j_block.back() = M;
+    }
+
+    {
+      int dp{int(P/p)};
+      while ( k_block.back() < P )
+        k_block.emplace_back( k_block.back() + dp );
+      k_block.back() = P;
+    }
+
+    //
+    #ifndef UNITN
+    std::vector<std::future<void>> futures;
+    #endif
+    //
+    switch ( m_choose ) {
+      case choose_algo::NO_THREAD:
+        for(integer i = 1; i < i_block.size(); ++i ) {
+          for(integer j = 1; j < j_block.size(); ++j ) {
+            Compute_C_block( A, B, C, i, j );
+          }
+        }
+      break;
+      case choose_algo::BS_THREAD:
+        for(integer i = 1; i < i_block.size(); ++i ) {
+          for(integer j = 1; j < j_block.size(); ++j ) {
+            futures.push_back(
+              BS_pool.submit_task(
+                [this, &A, &B, &C, i, j](){this->Compute_C_block( A, B, C, i, j );}
+              )
+            );
+          }
+        }
+        for(auto &f : futures) f.get();
+      break;
+      case choose_algo::TN_THREAD:
+        for(integer i = 1; i < i_block.size(); ++i ) {
+          for(integer j = 1; j < j_block.size(); ++j ) {
+            TN_pool.run(
+              [this, &A, &B, &C, i, j](){ this->Compute_C_block( A, B, C, i, j ); }
+            );
+            //TN_pool.run( &BlockMult::Compute_C_block, this, A, B, C, i, j );
+          }
+        }
+        TN_pool.wait();
+      break;
+    }
+    return true;
+  }
+
+  //-----------------------------------------------------
+
+  void
+  BlockMult::Compute_C_block(
+    mat const & A,
+    mat const & B,
+    mat       & C,
+    integer     i,
+    integer     j
+  ) {
+    auto II = Eigen::seqN( i_block[i-1], i_block[i]-i_block[i-1] );
+    auto JJ = Eigen::seqN( j_block[j-1], j_block[j]-j_block[j-1] );
+    C(II,JJ).setZero();
+    for ( integer k{1}; k < k_block.size(); ++k ) {
+      auto KK = Eigen::seqN( k_block[k-1], k_block[k]-k_block[k-1] );
+      C(II,JJ) += A(II,KK)*B(KK,JJ);
     }
   }
-  //
-  #ifndef UNITN
-  for(auto &f : futures) f.get();
-  #else
-  pool.wait();
-  #endif
-  //
-  return;
-}
 
-//-----------------------------------------------------
-
-void
-BlockMult::ComputeCBlock(
-  Eigen::MatrixXd const & A,
-  Eigen::MatrixXd const & B,
-  Eigen::MatrixXd       & C,
-  int                     n,
-  int                     m,
-  int                     p,
-  int                     i,
-  int                     j
-) {
-  auto && C_tmp = C.block( i * C.rows() / n, j * C.cols() / m, n, m);
-  for(int k = 0; k < A.cols()/p; k++) {
-    C_tmp +=  A.block( i * A.rows() / n, k * A.cols() / p, n, p ) *
-              B.block( k * B.rows() / p, j * B.cols() / m, p, m );
-  }
-}
-
-//-----------------------------------------------------
-
-bool
-BlockMult::checkValidity(
-  Eigen::MatrixXd const & A,
-  Eigen::MatrixXd const & B,
-  Eigen::MatrixXd       & C
-) {
-  if(A.cols() != B.rows()) {
-    std::cerr << "Invalid matrix multiplication. Found " << A.cols() << "x" << A.rows() << " Times " << B.cols() << "x" << B.rows() << std::endl;
-    return false;
-  }
-  if(A.rows() != C.rows() || B.cols() != C.cols()) {
-    std::cerr << "Invalid matrix multiplication. Found " << A.rows() << "x" << A.cols() << " Times " << B.rows() << "x" << B.cols() << " Expected to be " << C.rows() << "x" << C.cols() << std::endl;
-    return false;
-  }
-  return true;
 }
 
 //-----------------------------------------------------

@@ -16,9 +16,7 @@
 // Use the proposed ThreadPool to find a better one to perform parallel tasks.
 
 #include <iostream>
-
 #include <timer.hh>
-#include <MatrixMult.hh>
 #include <BlockMult.hh>
 
 // eigen do not parallelize
@@ -46,6 +44,9 @@ int main()
   int n_size = 300;
   int p_size = 200;
   int m_size = 500;
+  int N = 10;
+  int P = 10;
+  int M = 10;
   M1.resize(n_size,p_size);
   M2.resize(p_size,m_size);
   M3a.resize(n_size,m_size);
@@ -61,7 +62,7 @@ int main()
   // ███████║   ██║   ██║  ██║██║ ╚████║██████╔╝██║  ██║██║  ██║██████╔╝
   // ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝
 
-  std::cout << "Standard Product " << std::endl;
+  std::cout << "Standard Product\n";
   for (int i = 0; i < n_runs; i++) {
     mytimer t;
     M3a = M1 * M2;
@@ -69,23 +70,46 @@ int main()
   }
   mean   = times.mean();
   stdDev = (((times.array() - mean) * (times.array() - mean)).sqrt()).sum()/((double)(n_runs-1));
-  std::cout << "Average time: " << mean << " ms" << std::endl;
-  std::cout << "Standard deviation: " << stdDev << " ms" << std::endl;
+  std::cout  << "time: " << mean << " ms : " << stdDev << " ms (sdev)\n";
 
-  BlockMult BM;
+  std::cout << "Block Product\n";
+  BlockMult::BlockMult BM;
   // test
+
+  BM.set_NO();
   for (int i = 0; i < n_runs; i++) {
     mytimer t;
-    BM.multiply(M1, M2, M3b, 20, 20, 20);
+    BM.multiply( M1, M2, M3b, N, P, M );
     times(i) = t.elapsed();
   }
   mean   = times.mean();
   stdDev = (((times.array() - mean) * (times.array() - mean)).sqrt()).sum()/((double)(n_runs-1));
-  std::cout << "Average time: " << mean << " ms" << std::endl;
-  std::cout << "Standard deviation: " << stdDev << " ms" << std::endl;
+  std::cout  << "time (NO): " << mean << " ms : " << stdDev << " ms (sdev)\n";
 
-  std::cout << "Check if the results are the same" << std::endl;
-  std::cout << "M3a - M3b: " << (M3a- M3b).norm() << std::endl;
+  BM.set_TN();
+  for (int i = 0; i < n_runs; i++) {
+    mytimer t;
+    BM.multiply( M1, M2, M3b, N, P, M );
+    times(i) = t.elapsed();
+  }
+  mean   = times.mean();
+  stdDev = (((times.array() - mean) * (times.array() - mean)).sqrt()).sum()/((double)(n_runs-1));
+  std::cout  << "time (TN): " << mean << " ms : " << stdDev << " ms (sdev)\n";
+
+  BM.set_BS();
+  for (int i = 0; i < n_runs; i++) {
+    mytimer t;
+    BM.multiply( M1, M2, M3b, N, P, M );
+    times(i) = t.elapsed();
+  }
+  mean   = times.mean();
+  stdDev = (((times.array() - mean) * (times.array() - mean)).sqrt()).sum()/((double)(n_runs-1));
+  std::cout  << "time (BS): " << mean << " ms : " << stdDev << " ms (sdev)\n";
+
+  std::cout
+    << "Check if the results are the same\n"
+    << "M3a - M3b: " << (M3a- M3b).norm()
+    << '\n';
 
   return 0;
 }
