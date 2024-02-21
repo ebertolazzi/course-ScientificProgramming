@@ -10,7 +10,7 @@ else()
   add_compile_options(-Wall -Wextra -pedantic -Werror)
 endif()
 
-include_directories( ../eigen-3.4.0 )
+include_directories( ../../eigen-3.4.0 )
 
 # add the data to the target, so it becomes visible in some IDE
 add_executable( ex1 ex1.cc )

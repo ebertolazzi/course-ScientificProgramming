@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 project(example3)
 
 # add the data to the target, so it becomes visible in some IDE

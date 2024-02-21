@@ -1,8 +1,0 @@
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/ex1.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/ex2.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/ex3.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/ex4.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/ex5.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/ex6.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/edit_cache.dir
-/Users/enrico/Didattica_corsi/Didattica-GITHUB/github-ScientificProgramming/AA2023-2024/lesson3/example1/CMakeFiles/rebuild_cache.dir
