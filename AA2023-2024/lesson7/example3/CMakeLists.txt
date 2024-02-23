@@ -144,14 +144,14 @@ install(
 #  |_|  |_|_____/_/\_\
 #
 matlab_add_mex(
-  NAME mex_FUN1
-  SRC src_mex/mex_FUN1.cc
+  NAME stupid_class_mex_wrapper
+  SRC src_mex/stupid_class_mex_wrapper.cc
   LINK_TO ${LIBS}
-  OUTPUT_NAME mex_FUN1
+  OUTPUT_NAME stupid_class_mex_wrapper
 )
 add_custom_command(
-  TARGET mex_FUN1
+  TARGET stupid_class_mex_wrapper
   POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy
-  "$<TARGET_FILE:mex_FUN1>"
+  "$<TARGET_FILE:stupid_class_mex_wrapper>"
   "${CMAKE_CURRENT_SOURCE_DIR}/matlab"
 )
