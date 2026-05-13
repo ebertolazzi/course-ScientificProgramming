@@ -2,6 +2,7 @@ a.out
 *.o
 *.s
 *.mexmaci64
+*.d
 .vscode
 Xcode
 /**/build
