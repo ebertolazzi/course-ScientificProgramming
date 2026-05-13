@@ -93,7 +93,7 @@ namespace BlockMult {
           for(integer j = 1; j < j_block.size(); ++j ) {
             futures.push_back(
               BS_pool.submit_task(
-                [this, &A, &B, &C, i, j](){this->Compute_C_block( A, B, C, i, j );}
+                [this, &A, &B, &C, i, j](){ this->Compute_C_block( A, B, C, i, j ); }
               )
             );
           }
@@ -101,12 +101,11 @@ namespace BlockMult {
         for(auto &f : futures) f.get();
       break;
       case choose_algo::TN_THREAD:
-        for(integer i = 1; i < i_block.size(); ++i ) {
-          for(integer j = 1; j < j_block.size(); ++j ) {
-            TN_pool.run(
-              [this, &A, &B, &C, i, j](){ this->Compute_C_block( A, B, C, i, j ); }
-            );
-            //TN_pool.run( &BlockMult::Compute_C_block, this, A, B, C, i, j );
+        for ( integer i{1}; i < i_block.size(); ++i ) {
+          for ( integer j{1}; j < j_block.size(); ++j ) {
+            //TN_pool.run( &BlockMult::Compute_C_block, this, &A, &B, &C, i, j );
+            auto fun = [this, &A, &B, &C, i, j]() -> void { this->Compute_C_block( A, B, C, i, j ); };
+            TN_pool.exec( fun );
           }
         }
         TN_pool.wait();

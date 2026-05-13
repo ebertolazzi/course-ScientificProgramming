@@ -13,6 +13,7 @@
 
 #include <BS_thread_pool.hpp>
 #include <ThreadPool1.hh>
+#include <ThreadPool2.hh>
 
 namespace BlockMult {
 
@@ -31,7 +32,8 @@ namespace BlockMult {
 
     std::mutex mtx;
     BS::thread_pool    BS_pool;
-    Utils::ThreadPool1 TN_pool;
+    //Utils::ThreadPool1 TN_pool;
+    Utils::ThreadPool2 TN_pool;
 
     std::vector<integer> i_block;
     std::vector<integer> j_block;

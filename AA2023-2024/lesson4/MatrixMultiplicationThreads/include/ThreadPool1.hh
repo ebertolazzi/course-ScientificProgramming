@@ -97,7 +97,7 @@ namespace Utils {
       std::thread &       get_thread()       { return m_running_thread; }
 
     };
-    std::size_t m_thread_to_send = 0;
+    std::size_t m_thread_to_send{0};
 
     // need to keep track of threads so we can join them
     std::vector<Worker> m_workers;

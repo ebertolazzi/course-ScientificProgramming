@@ -86,6 +86,11 @@ int main()
   stdDev = (((times.array() - mean) * (times.array() - mean)).sqrt()).sum()/((double)(n_runs-1));
   std::cout  << "time (NO): " << mean << " ms : " << stdDev << " ms (sdev)\n";
 
+  std::cout
+    << "Check if the results are the same\n"
+    << "M3a - M3b: " << (M3a- M3b).norm()
+    << '\n';
+
   BM.set_TN();
   for (int i = 0; i < n_runs; i++) {
     mytimer t;
@@ -95,6 +100,11 @@ int main()
   mean   = times.mean();
   stdDev = (((times.array() - mean) * (times.array() - mean)).sqrt()).sum()/((double)(n_runs-1));
   std::cout  << "time (TN): " << mean << " ms : " << stdDev << " ms (sdev)\n";
+
+  std::cout
+    << "Check if the results are the same\n"
+    << "M3a - M3b: " << (M3a- M3b).norm()
+    << '\n';
 
   BM.set_BS();
   for (int i = 0; i < n_runs; i++) {

@@ -8,3 +8,4 @@ Xcode
 /**/CMakeFiles
 CMakeCache.txt
 *.exe
+.DS_Store
