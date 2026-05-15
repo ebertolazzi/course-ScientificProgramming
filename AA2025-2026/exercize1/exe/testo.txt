@@ -1,0 +1,412 @@
+# https://pennablu.it/fuga-dal-tempo/
+
+Giorno lunare 3, ore 14:27 utc
+Da quella distanza l’avamposto lunare somigliava a un grosso acino d’uva semisepolto nei depositi eluviali della piana. Victor Bresnik si era lasciato alle spalle le propaggini sudorientali del cratere Kies B e adesso osservava dal rover in avvicinamento quella che sarebbe stata casa sua per sei intere lunazioni. Solo, unico uomo sulla Luna, per una missione in cui aveva creduto fin dal principio. Donald Corbin, Direttore sulle operazioni all’equipaggio, un tipo che non mancava mai di indossare un cappellino da baseball sul suo completo giacca e cravatta, non aveva dovuto convincerlo a lanciarsi in quell’avventura spaziale in solitario. Victor, divorziato da un anno e mezzo e intenzionato a restarci, si era reso conto di amare soltanto lo spazio. Il matrimonio non faceva per lui, anche se all’inizio aveva pensato di poter vivere con una moglie al suo fianco. Ben presto si era però reso conto di desiderare altro nella vita, qualcosa che nessuna donna avrebbe mai potuto dargli: il vuoto siderale oltre la Terra. Staccarsi dal pianeta e raggiungere mete impensate – anche se era consapevole di non potersi mai spingere oltre la Luna o Marte. Ma a lui bastava uscire dall’atmosfera terrestre, penetrare le tenebre del cosmo, navigare nel nulla spaziale. Molti suoi colleghi avevano confessato di avvertire una certa claustrofobia nelle navicelle, ma Victor si sentiva a suo agio nei ristretti scomparti delle capsule.
+
+Sette mesi prima della partenza Corbin l’aveva convocato nel suo ufficio, una grande stanza piena di pubblicazioni della nasa, dalle cui pareti spiccavano i volti sorridenti e immoti di alte personalità dell’agenzia. Su una mensola la lunga storia delle esplorazioni spaziali veniva raccontata in miniatura da una serie di modellini in metallo, che partivano dalle vecchie missioni Apollo fino a giungere allo Shuttle Columbia e alle prime missioni su Marte. Alle spalle di Corbin, proprio accanto all’ampia finestra, Victor aveva notato il poster del nuovo programma spaziale EcoMoon. Se ne parlava già da alcuni anni e i primi test del veicolo di lancio Eris, che avrebbe spedito di nuovo l’uomo sulla Luna, si erano rivelati più che soddisfacenti.
+
+«Siamo pronti per vivere sulla Luna?», chiese quel giorno Victor con un misto di entusiasmo e apprensione.
+
+«Non proprio», rispose Donald. «Per ora sarà soltanto un avamposto. Una sorta di base provvisoria, se vuoi chiamarla così. Con la prima missione, EcoMoon 1, vogliamo innanzitutto studiare la resistenza umana in prolungate permanenze sul suolo lunare, con il minor consumo d’energia. Sì, sarà un soggiorno ecologico, fondato sul risparmio energetico e su una coltivazione sperimentale di vegetali. È una missione importante, Victor, forse la più importante e delicata del nuovo programma lunare. Porrà le basi per la costruzione di una vera città sulla Luna. I futuri coloni dovranno produrre da sé i propri alimenti e non torneranno a casa prima di cinque anni. Se torneranno, perché potrebbero decidere di restarvi per sempre, costruendo habitat che ricalchino in tutto e per tutto i paesaggi terrestri. Questo è il traguardo che vogliamo raggiungere e EcoMoon è il primo passo da compiere.»
+
+«Be’, diavolo se non è un progetto coi fiocchi», disse Victor. «Di questa città lunare se ne parla già da un po’.»
+
+«Vedrai che entro i prossimi tre decenni al massimo sarà una realtà.»
+
+«Hai parlato di permanenze prolungate. Prolungate quanto?»
+
+«Sei mesi.»
+
+Un fischio uscì dalle labbra di Victor. «È un bel po’ di tempo, Don.»
+
+«Già. E sarai solo, Vic», aggiunse un attimo dopo. «Finora abbiamo spedito astronauti in solitario limitandoci a farli orbitare intorno alla Terra, ma questa volta vogliamo testare un collaboratore robotico. Nella capsula che resterà in orbita attorno alla Luna ci sarà un robot a pilotarla, un robot che svolgerà ogni funzione che prima era affidata all’uomo.»
+
+«Questa sì che è una notizia bomba. La stampa ne è al corrente?»
+
+«Stai scherzando? I media lo sapranno a tempo debito. Per ora è tutto top secret.»
+
+«Com’è fatto questo robot?»
+
+«Oh, non immaginare un robot umanoide o un androide alla Blade Runner», rise Corbin. «Si tratta di una navicella robotizzata. Un’idea dei nostri ingegneri, ma ti assicuro che è qualcosa di spettacolare. L’abbiamo testata nel deserto e ne siamo rimasti davvero soddisfatti. È in grado di sostituire totalmente l’uomo.»
+
+Victor si fece pensieroso per qualche istante, fissando un punto davanti a sé. Poi tornò a guardare l’amico e disse: «Perché hai scelto me per questa missione?»
+
+Don alzò le spalle. «Sei l’astronauta che ha reagito meglio degli altri ai lanci spaziali, finora. Al rientro eri l’unico che pareva non aver riportato alcun effetto. Come se per te fosse stata una normale passeggiata lungo una avenue.»
+
+Victor rise.
+
+«Te la senti?», chiese Corbin. «Per me sei tu l’uomo adatto, Vic. L’uomo che darà il via a una civiltà lunare.»
+
+Victor, ricordò in quel momento, non aveva dovuto pensarci neanche per un secondo. Sarebbe stato il primo uomo al mondo a restare sulla Luna per sei mesi e, di fatto, il primo astronauta a raggiungere un pianeta da solo. Il primo pioniere di una colonia extraterrestre. Sarebbe passato alla Storia.
+
+E così eccolo là, ormai sul satellite terrestre da tre giorni e già alla sua quarta eva.
+
+Il 23 giugno 2081 Eris IV lo aveva portato in orbita attorno alla Luna e con il Lunar Outpost Module, Avior, Victor era allunato sul Mare Nubium il giorno successivo, alle 20:39:45 utc. Prima dell’allunaggio dell’Avior la nasa aveva spedito sul satellite terrestre alcune strumentazioni, come il sistema di controllo dell’ambiente e di sostegno alla vita, che avrebbe fornito ossigeno e acqua potabile, rimuovendo l’anidride carbonica e filtrando l’aria, e un modulo di viveri sufficienti per l’intera permanenza. Se il vegs (Vegetables Growth System), il sistema per collaudare la produzione di piante sulla Luna, avesse funzionato, Victor avrebbe potuto variare la sua dieta lunare, anche se non credeva di avere il pollice verde.
+
+La messa in funzione dell’avamposto non era stata difficoltosa: all’allunaggio la capsula abitativa si era sganciata dall’astronave. Il grosso cilindro, in realtà un modulo decagonale lungo quattro metri e largo due, si era sollevato dalla navicella grazie a due supporti telescopici. A quel punto erano fuoriuscite le ruote motrici e un braccio robotizzato l’aveva deposto al suolo. Dall’interno di Avior Victor aveva telecomandato il modulo abitativo allontanandolo di circa cento metri dall’astronave. Poi aveva fatto fuoriuscire la membrana gonfiabile, che in pochi minuti aveva assunto la forma di una cupola ovoidale: l’Hab era completo e pronto ad accogliere Victor.
+
+Nella prima eva aveva dovuto compiere operazioni di routine come in ogni altra missione lunare: sganciare il rover, che viaggiava ripiegato come ai tempi di Apollo 15 nel 1971; erano poi occorsi diversi minuti per metterlo in funzione, anche se le operazioni erano state di gran lunga velocizzate rispetto al xx secolo, oltre al fatto che ora era un veicolo chiuso e non più una “dune buggy” lunare, come amava chiamarlo Victor. Parcheggiato il rover, Victor aveva piantato la bandiera americana e poi aveva preso possesso della sua nuova casa, concedendosi un sorriso di trionfo. E un goccio di bourbon che aveva portato con sé, riservandolo per le occasioni speciali.
+
+La seconda eva, effettuata ancora il primo giorno, era stata invece impegnativa: Victor aveva dovuto montare l’antenna a ombrello e alcuni strumenti del laboratorio, collegare il sistema di controllo ambientale all’Hab e portare all’interno il vegs.
+
+Alla terza eva, il giorno successivo, Victor aveva eseguito una serie di test per verificare le trasmissioni verso la Terra, ricevendo un “forte e chiaro” da Kurt Whittaker, ex astronauta suo amico e capcom della missione, il solo uomo preposto alle comunicazioni.
+
+La sua quarta eva, che stava per concludersi, era stata degna di chiamarsi attività extraveicolare: Victor aveva raggiunto il cratere Kies B e raccolto diversi campioni di rocce. La sua passeggiata lunare era stata filmata dalla telecamera del rover e trasmessa alla Terra. E adesso, dopo quasi cinque ore all’aperto, stava finalmente tornando a “casa”.
+
+L’Hab non era certo il massimo della spaziosità, ma era quanto poteva permettersi la nasa per quella missione. Complessivamente di appena 60 metri quadrati, per Victor erano più che sufficienti. Aveva portato con sé il suo rolltablet con un migliaio di ebook da leggere e circa cinquecento film. Non gli serviva molto spazio per vivere e la solitudine dei mesi lunari non sarebbe stata un problema.
+
+Giorno lunare 7, ore 11:44 utc
+Victor festeggiò la sua prima settimana sulla Luna con un bicchierino di bourbon e una telefonata alla madre. In realtà la signora Virginia Bresnik fu invitata al Centro controllo per l’occasione: in fondo suo figlio aveva già battuto il record di permanenza sul satellite e quello era un evento speciale. Victor le promise di restare al caldo, preferendo non informarla sugli oltre 100 °C che si registravano nelle ore diurne, ma sarebbe stato troppo complicato parlare di tute spaziali e moduli abitativi. Vi fu anche una videochiamata del Presidente, che si congratulò con lui per il coraggio dimostrato nell’affrontare la missione e per aver posto così le basi per un futuro insediamento umano sulla Luna. EcoMoon, in effetti, era un programma partito nel migliore dei modi. Victor scambiò qualche battuta con Kurt, rassicurandolo sulla tabella di marcia. I due si diedero appuntamento telefonico di lì a tre giorni, dopo la visita al cratere Wolf.
+
+I primi sette giorni erano comunque volati. Victor aveva effettuato tre nuove eva e stava per iniziare l’ottava. Da buon geologo amava stare “all’aria aperta”, anche se quell’espressione lo fece sorridere all’interno del casco, mentre apriva il portello della camera di compensazione e iniziava a scendere per la scaletta con la consueta lentezza dovuta alla bassa gravità. Eppure, per quanto la malinconica desolazione lunare potesse mettere a dura prova anche il più misantropo e solitario degli uomini, per Victor Bresnik quel paesaggio grigio e smorto rappresentava quanto di meglio gli offrisse la vita in quel momento.
+
+Quel giorno lo aspettava un viaggio di quasi centocinquanta miglia fino al cratere Wolf e altrettante al ritorno. Alla massima velocità avrebbe impiegato otto ore per coprirle, ma sapeva benissimo di non poter spingere il rover fino a quel punto. Gli ordini erano stati chiari: mantenersi a una velocità di crociera di sei, sette miglia orarie. La superficie lunare non era un’Interstate. Questo significava giungere a destinazione in poco più di ventuno ore. Ma ciò che più lo preoccupava di quell’eva era la notte da trascorrere nel rover, ben lontano dalle spartane comodità dell’Hab.
+
+Lasciatosi alle spalle la fenditura chiamata Rima Hesiodus, guidò il rover in direzione Nord-Est, poi impostò il pilota automatico. Dopo quasi dieci ore superò i crateri Hesiodus B e Hesiodus X, passandovi in mezzo, quindi puntò a settentrione verso le propaggini del Wolf, che raggiunse infine in altre undici ore di viaggio, zigzagando fra i numerosi crateri da impatto. Grazie all’autoguida poté dormire qualche ora, ma fu un sonno inquieto per gli scossoni del rover e le vibrazioni dei motori elettrici. Una o due volte tentò di leggere, ma ben presto vi rinunciò. C’era qualcosa nel monocromo paesaggio lunare che lo distraeva, che catturava il suo sguardo e la sua attenzione. Nei periodi di veglia tentava di penetrare nelle chiazze d’ombra proiettate dai versanti delle rupi o di immaginare cosa avrebbe scoperto oltre l’orizzonte nero di fronte a lui. C’erano momenti in cui vedeva quei luoghi desolati e inabitati come un cosmico sepolcro che avrebbe custodito i suoi resti per l’eternità e se davvero avesse potuto scegliere un posto per morire e riposare in pace quello sarebbe stato l’immutabile suolo lunare. Le ceneri di Victor Bresnik sparse su uno dei mari, divenute parte dell’eluvium, parte della Luna. Si chiese cosa avesse generato quei pensieri macabri e si sorprese a sorridere, mentre il rover avanzava avvicinandosi sempre più alla meta.
+
+Stranamente il pendio meridionale del cratere non gli parve sconosciuto. Victor frugò nella sua memoria in cerca della fotografia che era sicuro d’aver visto in qualche libro. Un’immagine presa dall’alto, ricordava. Il grigio luce della pianura in netto contrasto con le tenebre dello spazio. Il Wolf era stato fotografato una sola volta dall’Apollo 16 nell’aprile 1972 e dopo oltre un secolo da quella storica missione la Terra poteva avere immagini ravvicinate e ad altissima risoluzione del cratere. E grazie ai campioni che Victor avrebbe raccolto si sarebbe potuta descrivere con la massima precisione la sua geomorfologia, anziché limitarsi alle emissioni termiche della superficie misurate con un radiometro montato su un orbiter.
+
+Il bordo del cratere era discontinuo, interrotto proprio sul lato meridionale da cui proveniva Victor e dove fermò il rover. Disceso dal mezzo, prese il rastrello, le pinze e alcuni contenitori e iniziò a setacciare il suolo.
+
+Fu l’attività extraveicolare più lunga mai compiuta sulla Luna e dall’uomo: quasi quarantotto ore. Victor era stanco, avvertiva un lieve mal di testa, ma si sentiva anche raggiante: quanti record avrebbe battuto in quella missione? Il Guinness dei primati avrebbe dovuto pubblicare un allegato soltanto per lui. Ci voleva un bourbon al rientro.
+
+Parcheggiò il rover accanto alla capsula abitativa e scese dal veicolo. Saltellando si diresse alla scaletta, salì e aprì il portello. La camera di decompressione gli sembrò curiosamente familiare, mentre poggiava in terra il contenitore di campioni e si apprestava a togliersi la tuta. Si guardò attorno, ma non vide nulla fuori posto. Anche il suo secondo déjà-vu sulla Luna fu ben presto dimenticato.
+
+Erano le ore 16:32 utc del nono giorno lunare.
+
+Giorno lunare 8, ore 13:07 utc
+Mentre il rover percorreva le ultime miglia del suo lungo viaggio verso il cratere Wolf, Victor ne osservò i pendii brulli e smorti, cercando di confrontare quel panorama in tempo reale con la fotografia scattata dall’Apollo 16. La digitale montata sul rover produceva immagini a 7 gigapixel. Sulla Terra avrebbero gioito. C’era però qualcosa che lo incuriosiva in quello scenario, e non era solo l’impressione di vivere dentro un’illustrazione in bianco e nero, ma non seppe spiegarsene la ragione. Man mano che si avvicinava, tuttavia, gli parve di esservi già stato e quella sensazione non poteva certo provenire dal vago ricordo di un vecchio scatto visto anni addietro. Accantonò presto quel pensiero e preferì concentrarsi sul lavoro che l’attendeva.
+
+Sceso dal veicolo, prese il carotiere, le pinze, il martello e un rastrello e iniziò a raccogliere campioni di suolo e rocce alle pendici del cratere. Avrebbe voluto esplorarne l’interno, ma era troppo vasto per quell’eva, e fu costretto a rinunciare. Un senso di nausea, poi, sopravvenuto durante il viaggio, non gli avrebbe permesso di godersi quell’avventura non prevista.
+
+Dopo circa quattro ore rimontò sul rover e si rimise in viaggio verso l’Hab. Uno strano malumore lo accompagnò per l’intero tragitto, accentuato da un’emicrania che minacciava di peggiorare e da quel disturbo cinetosico che l’accompagnava fin dal viaggio di andata. E infine il senso di aver già effettuato quell’attività extraveicolare, come se quelle giornate fossero state ripescate dal calderone dei ricordi, disarchiviate e replicate lungo la linea del tempo, di nuovo disponibili per Victor Bresnik.
+
+Al rientro, dopo altre ventuno ore di viaggio, si sentì stanco, spossato, il corpo pervaso da una fredda sudorazione. Non riuscì a spiegarsi quella sintomatologia, ma ciò che lo colpì, quando fu dentro la camera di compensazione e si fu tolto la tuta, fu la sensazione di aver già vissuto anche quella scena. Ma certo, si disse, è la mia ottava eva, chiaro che abbia già compiuto questi movimenti. Eppure due déjà-vu a breve distanza erano insoliti. Si applicò dietro l’orecchio un cerotto transdermico alla scopolamina e si sdraiò sull’amaca turbato e sfinito nel corpo e nell’animo.
+
+Giorno lunare 9, ore 17:28 utc
+Il sonno fu inquieto, turbato da scosse ipnagogiche e numerosi microrisvegli. Fastidiose fotopsie abbagliarono le sue visioni oniriche, come flash sparati contro la retina dei suoi occhi da un gigantesco riflettore. Quando finalmente si svegliò del tutto, gli parve di aver dormito un’eternità, ma era trascorsa appena un’ora da che si era messo a letto. Se ne stette supino, a osservare il soffitto dell’Hab, rimuginando sulle ultime ore. L’emicrania non era passata, anzi era aumentata d’intensità. Tuttavia non avvertiva più la nausea.
+
+Si decise ad alzarsi, si tolse il cerotto e lo gettò nel serbatoio di stoccaggio. Cercò di rammentare cosa avesse in programma quel giorno, ma non ne aveva idea. Si chiese anzi cosa avesse fatto il giorno prima. Era stato fuori? C’era stata un’altra eva? Sforzò le meningi, ma nessuna immagine gli tornò alla mente, come se la sua memoria si fosse svuotata. Deficit mnesico. In preda al nervosismo, cominciò a camminare avanti e indietro nel piccolo spazio, la sudorazione che aumentava e la paura, una paura senza nome, che lo avvinghiava come una belva. Che gli stava succedendo?, si chiese. Si ritrovava da solo su una pianeta deserto e senza risoluzioni a portata di mano.
+
+Okay, Victor, sta’ calmo, si disse. A cosa può essere dovuto? Stress da soggiorno lunare? Troppe eva ravvicinate? Prolungata solitudine? Oppure si trattava di un vero deterioramento cognitivo causato da un virus stellare o da un’anomalia genetica?
+
+Decise di fare un check-up e accese il sistema di biomonitoraggio. Si infilò il casco eeg e attese. Un’ora dopo l’hms (Healthcare Monitoring System) gli mostrò i risultati: attività elettrica cerebrale nella norma, alterazioni di bassa entità nella regione temporale. Nessuna diagnosi da segnalare.
+
+Stava bene. Sì, caro Victor, stai bene, quindi rilassati e continua con la missione. E allora perché quel mal di testa stava aumentando? Imprecò ad alta voce.
+
+Consultò il cronografo da polso. Era ormai ora di cena. Si accorse di non avere appetito, ma si costrinse a mangiare qualcosa. Non poteva permettersi di perdere forze. Prese un sacchetto porzionato senza neanche guardarne il contenuto e lo ficcò dentro lo scaldavivande. Ci avrebbe pensato il sistema robotizzato a leggerne i tempi di cottura. Un bip, infatti, lo avvisò quattro minuti dopo. La sua cena spaziale era pronta. Sorrise involontariamente. Se sulla Terra avesse proposto ai suoi amici una “cena spaziale”, tutti si sarebbero aspettati un’abbuffata coi fiocchi, qualcosa a cui il molliccio prelavorato che aveva davanti non si avvicinava minimamente. Tuttavia mangiò, quasi non avvertendo il sapore del cibo.
+
+Due ore dopo si ritrovò a fissare il suolo lunare da uno degli oblò dell’Hab. L’immutevole panorama era una distesa monocromatica che si perdeva nell’oscurità del cosmo. Trascorse parecchi minuti perso in se stesso, alla ricerca di risposte che non giungevano, che gli sfuggivano, anzi, come spezzoni di sogni al risveglio.
+
+Infine, stanco dell’apatia e dell’inazione, se ne andò a dormire.
+
+Giorno lunare 10, ore 6:04 utc
+La mattina successiva si ritrovò a catalogare gli ultimi campioni prelevati al cratere Wolf, quando il trillo della notifica spezzò il silenzio all’interno della cupola. Un bip che non si era aspettato nella confusione di pensieri che turbinavano nella sua testa. Al risveglio aveva dovuto applicarsi un nuovo cerotto transdermico, perché l’emicrania continuava a martellarlo senza lasciargli tregua, poi aveva mangiato qualcosa per colazione e infine, dopo aver controllato la tabella di marcia, si era messo al lavoro sui campioni.
+
+Sullo schermo del computer apparve un videomessaggio in arrivo.
+
+Proveniva dall’avamposto stesso.
+
+Il mittente era lui.
+
+Victor aggrottò le sopracciglia. Un errore, pensò. Il programma mi ha mostrato i messaggi inviati e non quelli in arrivo. Ma Victor non aveva inviato alcun videomessaggio e fra quelli in arrivo c’era solo l’ultima chiamata di Kurt, avvenuta alcuni giorni prima.
+
+No, quel messaggio era stato inviato da Victor Bresnik a Victor Bresnik. La data riportata era il giorno lunare 13. Tre giorni a venire. Victor era sempre più confuso. Forse un bug del programma gli aveva inoltrato una vecchia chiamata. Incuriosito, avviò la videoregistrazione.
+
+E fu sorpreso di ritrovarsi davanti alla telecamera.
+
+“Hai avuto dei déjà-vu, caro Victor? Sì, ne hai avuti. E sono cominciati in prossimità del cratere Wolf. Ti sembrava familiare, come ti sono sembrate familiari altre azioni da te compiute. E che dire dell’emicrania, del senso di straniamento, dei vuoti di memoria? Tutti legati ai déjà-vu. Ma non sono déjà-vu. No. È un fottuto esperimento della nasa! Il tempo è andato in loop. Il tempo è andato a farsi fottere, amico. Stai ripetendo da giorni la stessa musica. Sì, s’è incantato il disco, per usare una vecchia espressione. La buona notizia è che ho scoperto cosa ha causato il loop. È un dispositivo che hai portato sulla Luna e si trova nel lander. La cattiva notizia è che non si può disattivare. Sei costretto a un eterno ripetersi degli eventi. Ma forse c’è una scappatoia. Forse puoi fare qualcosa, come ho fatto io spedendoti questa registrazione dal futuro. Ho cambiato la data al computer e così hai potuto riceverla nel passato. Lascia perdere, meglio non starci a ragionare su, a me è venuto più volte il mal di testa. È l’effetto farfalla, amico mio, che ti salverà. Ti resta solo quello. Modifica gli eventi, anche di un’inezia. E forse riuscirai a trovare una soluzione per tornare alla normalità.”
+
+Victor si lasciò cadere sulla sedia. Era uno scherzo? Da parte di chi? No, era proprio lui quello che parlava seduto su quella stessa sedia, davanti alla webcam del computer. Ma se era lui, perché non ricordava di aver registrato quel messaggio? “Forse puoi fare qualcosa, come ho fatto io spedendoti questa registrazione dal futuro.” Era assurdo, com’era possibile tutto questo? E perché la nasa avrebbe mandato un dispositivo sulla Luna per mandare il tempo in loop? La sua missione prevedeva altro, non esperimenti sul tempo. Stette a rimuginare sulla questione per oltre un’ora, rivedendo altre tre volte il videomessaggio, senza venirne a capo. No, si convinse infine, forse non ricordava di aver registrato il videomessaggio per via del malessere che l’aveva colpito il giorno prima. Il deficit mnesico non gli permetteva di accedere ai suoi ricordi e l’emicrania doveva esser stata talmente intensa da averlo fatto sragionare. Soltanto così poteva spiegarsi quel delirio sul tempo.
+
+Eppure nella videoregistrazione appariva in sé, il tono di voce era quasi canzonatorio, non alterato come ci si sarebbe aspettati se avesse avuto un disturbo mentale.
+
+Decise di rivedere il filmato ancora una volta, ma la percezione che ebbe fu la stessa: quel Victor Bresnik era una persona normale, non aveva uno sguardo perso, allucinato, non mostrava di esser preda di psicosi. Era un uomo sano di mente.
+
+Avvertì un senso di panico nascere in qualche punto in profondità del suo animo, un piccolo focolaio di angoscia e smarrimento che minacciava di trasformarsi in un incendio distruttivo. Un accenno di tachicardia e un aumento della sudorazione lo avvolsero in una stretta che si faceva via via più soffocante. Si accorse di lacrimare, un pianto silente, d’abbandono. Erano anni che non piangeva, dalla morte del padre, che risaliva a quindici anni addietro. Quella volta aveva lasciato che le lacrime scorressero senza inibizioni, ma nessuno aveva fatto caso a lui, tutti gli sguardi erano per il Generale Bresnik che veniva calato nella fossa assieme alla bara avvolta nella bandiera. Tre salve di commiato avevano spezzato il silenzio e quello fu l’ultimo addio, l’ultimo suono che aveva legato Arthur Bresnik alla terra dei vivi.
+
+Victor si asciugò le lacrime col dorso della mano. Quell’umidità lo riportò all’immediata realtà.
+
+Fu allora che decise di contattare Kurt.
+
+Si fermò prima di attivare la chiamata. Che cosa gli avrebbe chiesto? Non poteva parlargli certo dei déjà-vu e del mal di testa. Avrebbe dovuto accennare al dispositivo? No, forse era meglio non farlo. Voleva scoprire quanto sapesse Kurt dell’intera faccenda, quanto gli stesse nascondendo. Era probabile che l’amico non ne sapesse nulla. Forse era meglio rimandare. Poi gli balenò in mente un’idea.
+
+“È un dispositivo che hai portato sulla Luna e si trova nel lander.”
+
+Victor Bresnik iniziò a prepararsi per la sua nona eva.
+
+Giorno lunare 10, ore 12:44 utc
+Non era più rientrato su Avior da quand’era allunato. Da quel momento aveva vissuto nell’Hab, uscendone soltanto per le attività extraveicolari. Per compiere il tragitto dal modulo abitativo al lander preferì muoversi a piedi: erano soltanto un centinaio di metri e coprì la distanza in un paio di minuti. Salì la scaletta, aprì il portello e s’introdusse all’interno.
+
+Si domandò dove potesse essere il dispositivo. Perché non l’aveva notato nel suo viaggio dalla Terra alla Luna? Dove l’avevano nascosto? Cinque metri cubi di volume abitabile non erano pochi, a pensarci bene. Avrebbe potuto essere ovunque, anche perché il Victor Bresnik del futuro non solo aveva dimenticato di rivelargli dove fosse, ma anche che forma e dimensione avesse. E il Victor Bresnik del presente non poteva certo mettersi a smontare tutti i pannelli per trovarlo.
+
+Quella nuova eva fu un fiasco e Victor ritornò all’Hab sconsolato e frustrato. Durante il breve tratto a piedi, anzi, si costrinse a voltarsi indietro più volte, come se si sentisse attanagliato da una forza invisibile in agguato nello spazio. Accelerò l’andatura, balzando come una palla al rallentatore, e non si sentì sicuro finché non si fu chiuso il portello dell’Hab alle spalle.
+
+Trascorse i seguenti due giorni arrovellandosi su quel problema. Si augurò di ricevere altri messaggi dal Victor del futuro, ma non giunse nulla. Ebbe, così almeno gli parve, altri due o tre déjà-vu, accompagnati da forti emicranie, vuoti di memoria, fotopsie notturne e incubi. Cercò di concentrarsi sul lavoro, finendo di archiviare i campioni e preparando i piani per altre due eva, la prima alla Rima Hesiodus e l’altra al cratere Mercator. La prossima videochiamata dal Centro di controllo missione sarebbe avvenuta la sera del dodicesimo giorno, ma Victor non aveva ancora deciso come indagare sul dispositivo con Kurt.
+
+Giorno lunare 10, ore 6:06 utc
+Non aveva sentito la notifica acustica della videochiamata in arrivo, troppo preso dalla catalogazione degli ultimi campioni prelevati e con la testa che minacciava di scoppiargli da un momento all’altro. La scopolamina del cerotto transdermico si era rivelata inefficace, così al risveglio aveva buttato giù quattro pastiglie di fesol-bromuro di entocibina, che avevano solo peggiorato la situazione. I dolori si erano intensificati subito dopo, raggiungendo uno stato quasi parossistico. Victor aveva urlato, tenendosi le tempie come per alleviare la sofferenza, poi aveva scaraventato in terra alcuni contenitori e più volte aveva preso a pugni la parete metallica dell’Hab prima di calmarsi. Ridotto quasi a uno stadio larvale, era stato certo che la sua fine sarebbe presto giunta. Un giorno una squadra inviata dalla Terra avrebbe trovato le sue spoglie, un corpo raggomitolato in un angolo dell’Hab senza più parvenza di quello che un tempo era stato uno dei migliori astronauti al mondo. Quel crollo l’aveva lasciato senza fiato e senza forze, la mente quasi vuota di emozioni. Era caduto in una sorta di trance, in un sonno di penombra popolato da frammenti opalescenti di sogno, da pensieri ancora in stato embrionale che erano svaniti ancor prima di concretizzarsi. Soltanto mezz’ora più tardi era riuscito a rimettersi al lavoro, nonostante l’emicrania.
+
+Ora, passando davanti al monitor del computer, vide la spia rossa lampeggiante e, incuriosito, si avvicinò. Aveva parlato con il capcom qualche giorno prima, perché aveva già richiamato?
+
+Quando lesse il mittente del messaggio, restò sbalordito. Il mittente era lui stesso. Avviò il bug checker e attese, ma il programma non rilevò alcun errore o avaria al LunaCom, il sistema di connessione laser con cui comunicava con la Terra. Dunque, per quanto improbabile, l’unica verità possibile era che si fosse autoinviato un videomessaggio. Ma per quale motivo e, soprattutto, perché non lo ricordava? Con un leggero tocco sullo schermo avviò la videoregistrazione.
+
+Durò circa un minuto e lasciò Victor scioccato. Sedette sulla sedia, riguardando le immagini almeno altre due volte, come per sincerarsi che fossero reali, che non fosse tutto un’illusione, uno scherzo bizzarro del destino, di una qualche divinità nascosta nello spazio interstellare. O forse erano i primi sintomi della selenopatia, il disturbo psicotico verso cui gli scienziati avevano messo in guardia la nasa, quando le prime voci su una futura città lunare avevano iniziato a circolare. Allucinazioni, senso di estraneità, egodistonia. Nessuno poteva prevedere come avrebbe reagito l’organismo in un pianeta inabitabile come la Luna, rinchiuso in un guscio protettivo a gravità controllata, mangiando cibo liofilizzato e vivendo lontano dalla civiltà, dall’aria pura, dalla natura. E se quei suoi malesseri, quei disturbi fossero i sintomi di una selenopatia?
+
+No, si convinse Victor, nulla di tutto ciò. Quello là davanti era proprio lui, che lo avvisava di uno strano dispositivo caricato sul lander, che aveva mandato in loop il tempo sulla Luna. Un circolo vizioso di eventi che non avrebbe mai avuto fine. Ecco il perché dei déjà-vu, si disse. No, è pazzesco, aggiunse mentalmente subito dopo, dev’esserci una spiegazione più razionale. E se invece fosse tutto vero? O, peggio, se stesse impazzendo, se non fosse selenopatia ma una vera psicosi, un male che aveva mandato a farsi fottere il suo cervello, non il tempo?
+
+Devo parlarne con Kurt a ogni costo.
+
+Ma cosa gli avrebbe detto? Che un certo Victor Bresnik gli aveva mandato un messaggio avvertendolo del dispositivo? Che quel messaggio proveniva dal futuro? Che il tempo si stava ripetendo? Kurt avrebbe annullato la missione e l’avrebbe fatto rientrare, facendolo poi ricoverare in una clinica psichiatrica.
+
+Se davvero il tempo era andato in loop, “a farsi fottere”, come aveva specificato lui stesso – sì, era proprio lui ad aver parlato, ci si riconosceva perfettamente – allora non ci sarebbe mai stata alcuna partenza dalla Luna e alcun ritorno di Victor Bresnik sulla Terra.
+
+Fu allora che decise di fare un salto sul lander. Sarebbe stata una eva non prevista. Meglio così, pensò subito dopo, mentre raggiungeva la camera di compensazione per infilarsi la tuta. Dopo tutto era stato lui stesso a consigliarsi di modificare gli eventi.
+
+Giorno lunare 10, ore 8:43 utc
+La breve camminata che lo portò dall’Hab al lander lo stancò come se avesse percorso dieci chilometri anziché soltanto un centinaio di metri. Più volte fu costretto a fermarsi, spaziando con lo sguardo la piana del Mare Nubium in cerca di qualcosa cui non sapeva dare un nome. Man mano che si avvicinava alla capsula avvertiva quell’evento come un’esperienza già vissuta in precedenza, anche se era la prima volta che faceva ritorno al lander. Un ennesimo déjà-vu che aumentò il suo senso di disagio.
+
+All’interno di Avior Victor si chiese dove potesse nascondersi il fantomatico dispositivo. Dietro il pannello del computer principale? Dietro quello delle telecomunicazioni? O dietro quelli degli strumenti di navigazione? O dei fusibili? O perfino sotto il piano antiscivolo? Ci aveva forse camminato sopra senza saperlo? Nonostante lo spazio limitato, l’Avior nascondeva altro volume oltre quello visibile e era impensabile mettersi a smontare tutto per cercare un dispositivo di cui non conosceva nemmeno la forma. E se anche l’avesse trovato, cosa avrebbe dovuto farne? Distruggerlo? E se avesse peggiorato tutto? Se la distruzione del dispositivo avrebbe incasinato ancor più il tempo, magari bloccandolo, magari creando un buco nero temporale e uccidendolo all’istante?
+
+Speculazioni che non portavano a nulla, si disse. L’unica certezza era l’impossibilità di scovare quel congegno là dentro.
+
+Si arrese e fece ritorno all’Hab. A fatica si tolse la tuta nella camera di compensazione, e il solo pensiero di dover affrontare un’altra intera giornata di lavoro lo fece precipitare in una crisi di ansia. Vagò nel piccolo spazio come un automa senza controllo, finché si decise a continuare il lavoro di archiviazione.
+
+Quando giunse l’ora del pranzo, quasi non se ne accorse. L’inappetenza aveva iniziato ad affliggerlo già dal giorno prima, rammentò in quel momento. E ancora una volta Victor si costrinse a mangiare, per non rischiare anche un deperimento fisico nelle sue condizioni. Inoltre l’indomani l’aspettava una nuova eva e doveva terminarne i preparativi, quindi doveva stare in forze.
+
+Giorno lunare 11, ore 7:21 utc
+Quella mattina Victor si alzò di nuovo con una forte emicrania, ingollò alcune pastiglie di entocibina e si augurò che passasse al più presto. Aveva avuto una notte inquieta, quasi insonne, tra sogni confusi e continue veglie durante le quali si era lambiccato il cervello su quel bizzarro messaggio ricevuto dall’immediato futuro. Era sempre più convinto di dover parlare con Kurt, ma non trovava un modo “diplomatico” per affrontare l’argomento. Il futuro non era ancora scritto e qualsiasi evento del presente avrebbe potuto generare uno degli infiniti futuri possibili. Si chiese se cambiando dei minimi particolari avrebbe davvero causato quell’effetto farfalla che gli avrebbe garantito una probabilità di salvezza, di uscita dal loop temporale. In quel momento, comunque, aveva un’altra eva da affrontare e accantonò la questione.
+
+Era diretto alla Rima Hesiodus, una lunga frattura che per circa centosessanta miglia si estendeva dal cratere che le dava il nome fino al cratere Capuanus. Il graben, ampio quasi cinque miglia, aveva una profondità di almeno dieci metri e Victor per discendervi avrebbe sperimentato la nuova cintura-razzo progettata appositamente per l’esplorazione di spaccature e crateri lunari.
+
+Uscì dall’Hab e caricò sul rover i sismografi da posizionare sul fondo della fossa, controllò gli attrezzi per la raccolta dei campioni e assicurò con delle cinghie la cintura-razzo. Poi saltò a bordo e si mise in viaggio. La Rima distava sei ore dall’avamposto e Victor contava di rientrare per le 24 al massimo. Il mese successivo sarebbe comunque dovuto ritornarvi per spostare i sismografi, fino a coprire una lunghezza di trenta miglia con altre quattro eva.
+
+Durante il viaggio Victor ragionò sul loop temporale, sulla sua effettiva possibilità, chiedendosi quando tutto sarebbe nuovamente ricominciato. Più vi rifletteva e più gli appariva al di fuori di ogni logica. Sarebbe dunque vissuto in eterno, se non fosse riuscito a sbloccare la situazione? No, impossibile, l’eternità non era contemplata, quindi sarebbe invecchiato comunque, magari più lentamente, magari senza accorgersene. In un punto imprecisato nell’intervallo di tempo del circolo vizioso Victor Bresnik sarebbe deceduto e nessuno avrebbe mai ritrovato le sue spoglie, perse per sempre nelle nebbie del tempo. Forse era già morto, anzi, e ciò che stava vivendo non era altro che una memoria post mortem, un ricordo codificato nel dna del tempo, costretto a un infinito riavvolgersi della bobina degli eventi. Si domandò anche quando scattasse il loop: a un certo punto, che secondo lui coincideva con l’attimo esatto in cui era stato azionato il dispositivo, il tempo iniziava a scorrere come in un ipotetico cerchio, ritrovandosi infine al punto di partenza. In quel momento due domande gli saltarono in testa: quando avevano attivato il dispositivo? E quanto durava il loop? Il congegno era stato di sicuro azionato dalla Terra, quindi il computer di bordo avrebbe potuto rintracciarne il segnale. Avrebbe controllato al rientro. Riguardo al periodo di durata del loop, Victor non aveva idea di come calcolarlo. Avrebbe potuto prendere nota dei vari déjà-vu, ma quegli appunti sarebbero rimasti al ripetersi dei giorni? O sarebbero scomparsi? Il mal di testa s’intensificò e lo fece desistere dal continuare quelle speculazioni sul tempo.
+
+Da lontano la Rima Hesiodus era una linea quasi retta e nera nel grigio grafite del suolo lunare. Appena la scorse, Victor accelerò, portando il rover quasi a ridosso della fenditura. Scese, si avvicinò saltellando al bordo e osservò per qualche secondo la calma e l’immobilità del paesaggio lunare, assaporandone il senso di vuoto che emanava. La Luna, immaginò in quel momento, era una terra cimiteriale popolata dai fantasmi dei primi astronauti che ne avevano calpestato il suolo. Chi sono io per dissacrare questo tempio cosmico?
+
+Tornò sui suoi passi, liberò la cintura-razzo dal rover, poi la indossò, non senza fatica, e vi agganciò i primi due sismografi. Alla nasa aveva provato innumerevoli volte quell’operazione, ma farlo sulla Luna era un altro paio di maniche, constatò. La cintura-razzo era una variante più leggera e meno ingombrante delle mmu. Le Manned Maneuvering Unit, le unità di manovrazione per le eva, erano state progettate per eseguire interventi straordinari nello spazio senza bisogno di ancorarsi alla navetta. Una società aveva ripreso quel vecchio progetto, adattandolo all’esplorazione lunare. Battezzata Lunar Maneuvering Unit o lmu, la cintura-razzo aveva due propulsori criogenici e una coppia di cloche per direzionarla e, almeno a prima vista, sembrava semplice da guidare. Al Johnson Space Center, nella grande piscina in cui si era addestrato per simulare le eva, aveva usato una lmu modificata per operare sott’acqua e, ricordò, aveva subito familiarizzato con il nuovo mezzo. Si augurò accadesse lo stesso, mentre accendeva i propulsori. La cintura-razzo si sollevò dal suolo e Victor la diresse più o meno al centro del graben, poi azionò il comando per la discesa e atterrò sul fondo.
+
+«Che succede se i propulsori smettono di funzionare quando devo risalire?», aveva chiesto tre mesi prima della partenza a Willy Torresi, l’ingegnere che aveva progettato la lmu.
+
+«Funzioneranno», aveva risposto Torresi, laconico.
+
+«Non mi basta, amico», aveva ribattuto Victor.
+
+Alla cintura-razzo fu apportata una modifica: in un vano erano custoditi dei ramponi e due piccozze che avrebbero aiutato Victor a risalire l’acclive pendio della Rima. Al Johnson Space Center si era esercitato anche in “arrampicata lunare”, come scherzosamente l’aveva battezzata.
+
+Sganciata la cintura-razzo, Victor piazzò il primo sismografo. Poi saltellando e camminando si allontanò di duecento metri per piazzare il secondo. Quindi, tornato indietro, riagganciò alla tuta la cintura-razzo, risalì in superficie, prese gli altri due sismografi e ripeté l’operazione. Stava installando l’ultimo, a seicento metri circa dal primo, quando gli sfuggì di mano. Miracolosamente il sismografo non cadde al suolo. La mano di Victor lo intercettò afferrandolo appena in tempo. Si congratulò con se stesso per la prontezza dei riflessi. Poi rifletté su quanto era appena avvenuto. No, si disse, non era stata una questione di riflessi. La sua mano si era trovata nel punto e nell’attimo esatti in cui avrebbe potuto riprendere lo strumento. Come se, inconsciamente, Victor sapesse che quel sismografo sarebbe caduto. Come se avesse avuto un
+
+(déjà-vu)
+
+suggerimento da un’indefinita entità. No, non c’era altra spiegazione (né alcuna indefinita entità): Victor aveva appena avuto un ennesimo déjà-vu. Il problema era che non erano dei déjà-vu, ma niente di più che un’anomala replica degli eventi. Victor aveva già vissuto quel giorno, aveva già svolto quell’eva, e chissà quante volte. Si sentì demoralizzato, perso in una frustrazione che, temeva, sarebbe cresciuta sempre più, facendolo sprofondare in un apatico automatismo. Era convinto che prima o poi i déjà-vu si sarebbero fatti più frequenti, finché Victor sarebbe stato cosciente del loop temporale, dal suo inizio alla sua fine. Doveva reagire, doveva escogitare qualcosa per uscire da quel fenomeno, o sarebbe vissuto come in un film riprodotto a ciclo continuo, senza neanche rendersi conto di stare per morire.
+
+È l’effetto farfalla, amico mio, che ti salverà. Ti resta solo quello.
+
+Ricordò le parole del Victor Bresnik del futuro. Le sue parole.
+
+E in quel momento gli venne un’idea. Era pericolosa, certo, ma non più di tanto. In fondo spedire un uomo da solo sulla Luna per sei mesi aveva i suoi rischi e non se n’era certo preoccupato quando aveva accettato la proposta di Corbin.
+
+Terminò di posizionare l’ultimo sismografo, poi tornò indietro, dove aveva lasciato la cintura-razzo. Prese un paio di pinze che aveva sempre con sé, assieme ad altri piccoli arnesi sparsi qui e là sulla tuta per le riparazioni urgenti, e tranciò il cavo di alimentazione.
+
+«Ecco», disse, «adesso questa è inutilizzabile. Spero tu capisca, Torresi. Non è niente di personale.»
+
+Per risalire, ora, avrebbe dovuto usare i ramponi e le piccozze, e direttamente sulla parete della Rima, non più su quella fittizia e subacquea del Johnson Space Center.
+
+I ramponi avevano la stessa funzione di quelli usati in montagna per scalare le pareti di ghiaccio. Potevano essere agganciati con facilità sulla punta dello scarpone, una trovata ingegnosa che aveva dato del filo da torcere ai ricercatori del Johnson.
+
+Victor li tirò fuori dallo scomparto, li pose a terra e li infilò. Si agganciarono subito. Poi prese le piccozze e iniziò la scalata, dieci metri alla ridotta gravità lunare. Avrebbe impiegato almeno mezz’ora per risalire.
+
+Gli ci volle quasi un’ora. All’inizio andò spedito e gli parve che l’ascesa non fosse così lenta e complessa ma, arrivato quasi a metà, rischiò di cadere. Uno dei ramponi non fece presa e il piede di Victor scivolò. La mano fu però rapida a puntellare una piccozza sulla roccia e Victor se ne restò per un minuto abbondante appeso al puntale, cercando di riprendere l’equilibrio. Poi uno dei piedi colpì la parete e Victor poté riassestarsi e proseguire l’ascensione. Da quel momento preferì rallentare e prendersi tutto il tempo necessario. Tanto ne ho da vendere, pensò con un certo drammatico umorismo.
+
+Uscito finalmente dal graben, ripose ramponi e piccozze sul rover, poi un lampo lo accecò e la visione di Victor si ridusse a un enorme cerchio d’un bianco folgorante, contornato da miriadi di altri piccoli, candidi cerchi che gli ruotavano attorno come tanti satelliti impazziti. Cercò di schermarsi gli occhi con le braccia, ma la luce era ovunque e sembrava trapassare ogni cosa. Urlò, o almeno così gli parve, poi tutto divenne confuso. Rivisse frammenti della sua infanzia intervallati a spezzoni di sogni passati, come se la sua vita, filmata dalla telecamera del tempo, avesse ripreso a scorrere dal principio e in mezzo fossero finiti fotogrammi delle sue attività oniriche.
+
+Svenne.
+
+Al risveglio si ritrovò riverso sul suolo lunare, incapace di orientarsi, a comprendere chi fosse e dove fosse. Impiegò del tempo, non seppe stabilire quanto, a riprendere possesso delle sue facoltà cognitive. Quando capì cosa era accaduto, il panico lo assalì. La riserva di ossigeno stava per esaurirsi e doveva fare al più presto ritorno alla base.
+
+Salì sul rover, mise in moto e tornò indietro.
+
+Giorno lunare 12, ore 1:34 utc
+Al rientro all’Hab Victor fece il punto della situazione. Aveva perso la cintura-razzo – sì, avrebbe potuto tentare la scalata indossandola, anziché abbandonarla sul fondo, ci aveva pensato, ma poi si era detto che era meglio lasciarla laggiù, che quell’azione avventata sarebbe stata un’ottima spinta per l’effetto farfalla e magari avrebbe anche funzionato – e aveva anche perso quattro sismografi, che non avrebbe potuto riposizionare alla prossima eva prevista per la Rima Hesiodus. Anzi, erano andate a farsi friggere anche tutte le successive eva per la Rima. Poi era svenuto. E questo, forse, era il problema maggiore. Non gli era mai capitato finora. I déjà-vu avevano provocato l’emicrania, i sensi di ansia e inquietudine, la spossatezza e l’inappetenza – anzi, era meglio dire che il loop temporale aveva provocato tutto ciò – ma mai una perdita di coscienza. Victor si chiese se questo peggioramento, questa sorta di evoluzione avvenuta nel suo organismo, non fosse un segnale. Ma come doveva interpretarlo? Era giunto a una svolta? Si avvicinava alla fine dei suoi giorni?
+
+Doveva chiedere aiuto al capcom, non aveva altre alternative. Si chiese in quel momento se avrebbe dovuto confessare a Kurt il danno alla lmu o se sarebbe stato meglio sorvolare. In fondo la nasa era stata ben accorta a celare la presenza di un dispositivo sul lander che aveva incasinato il tempo sulla Luna, costringendolo a una sorta di reclusione temporale e minando anche la sua salute mentale. La cintura-razzo si era danneggiata durante una discesa, si disse Victor, e per poco lui non ci aveva rimesso la pelle: questa sarebbe stata la sua versione. Che andassero pure a controllare, se volevano. Adesso aveva problemi più urgenti da risolvere.
+
+Prima di chiamare Kurt, però, doveva fare una piccola ricerca: il dispositivo era stato attivato dalla Terra, aveva sospettato Victor, o al massimo dalla Terra ne avevano programmato l’avvio in un giorno prestabilito, ma sarebbe stato troppo rischioso: sebbene a ogni esplorazione spaziale si cercasse di calcolare tutto al millesimo di secondo, erano tuttavia messi in conto eventuali ritardi, che puntualmente si verificavano, per buona pace di tutto il controllo missione. Quindi, dedusse Victor, quel congegno era stato azionato dopo l’allunaggio. Il computer di bordo avrebbe potuto rintracciarne il segnale, fornendogli data esatta e orario preciso. Victor sedette al computer e richiamò il file di log, quindi avviò il visualizzatore degli eventi e in pochi secondi lo schermo gli mostrò l’intera cronologia. Adesso aveva sott’occhio tutto il registro degli eventi di sistema dei due computer – quello di bordo nel lander e quello nell’Hab, collegati in rete – e poteva controllare quali file fossero stati aperti e quali programmi avviati. Cliccò alla voce “Source” per avere un immediato riscontro dei suoi sospetti. Le sorgenti del segnale avrebbero dovuto essere soltanto due: Avior, relativa al computer del lander, e Hab, relativa al computer che stava usando. La schermata gliele mostrò in ordine alfabetico. Victor scorse la pagina con la barra di scorrimento finché trovò una riga sospetta:
+
+Level	Date and Time	Source
+Information	7/01/2081 15:21	mcc
+«Bingo!», disse Victor. «Eccoti qui, mia cara».
+
+Era stato registrato un evento l’uno luglio alle 15:21 – quando era in viaggio per il cratere Wolf – e la sorgente non era né l’Avior né l’Hab, ma l’mcc. Il Centro di controllo missione. La Terra.
+
+«Ne avete approfittato durante la mia eva più lunga, così da avere tutto il tempo per fare i vostri giochetti.»
+
+Le righe che mostravano mcc come sorgente erano sessantatré e coprivano un tempo di circa sette ore. Le righe iniziali, una decina, erano contrassegnate come “Information”, ma poi Victor ne trovò parecchie classificate come “Warning” e le ultime cinque come “Critical”.
+
+Si lasciò andare contro lo schienale della sedia. Aveva bisogno di riflettere con calma, spegnendo la furia che sentiva montare dentro di sé. Doveva pensare a freddo, capire che cosa fosse successo con i pochi dati a disposizione. “Information” poteva significare che era stata apportata una modifica a un file o aperto un programma, o attivato un congegno. Quindi all’inizio da Terra erano entrati nel computer del lander e avevano lanciato il programma che avrebbe attivato il dispositivo. Poi iniziavano i livelli di “Warning”, una quarantina addirittura: qualcosa era andato storto. Il livello di avviso indicava un problema serio, forse un danno, o un conflitto fra programmi o file in esecuzione. Era chiaro che da Terra non erano riusciti a risolverlo, perché le ultime righe parlavano di errori critici: la situazione d’origine non poteva essere ripristinata automaticamente.
+
+E il tempo sulla Luna era andato a farsi fottere.
+
+Complimenti al Centro di controllo missione. Complimenti ai geni della nasa.
+
+«Mi hai giocato un bel tiro, caro Kurt», disse Victor. Si chiese a cosa servisse quel dispositivo, ma soprattutto perché glielo avessero tenuto nascosto. Forse il loro intento non era mandare in loop il tempo. Anzi, non era quello, Victor ne era certo. Il loop era una conseguenza di tutti quegli “Warning”. Ma a che sarebbe dovuto servire? Aveva comunque a che fare col tempo?
+
+Okay, pensò, questa giornata ha avuto comunque i suoi lati positivi: ho scoperto che i miei sospetti sul segnale partito dalla Terra erano fondati e che la nasa aveva un esperimento segreto da eseguire (e che non è andato a buon fine); ho rotto la cintura-razzo e mandato al diavolo le prossime eva alla Rima Hesiodus, quindi dovrebbe essercene abbastanza per l’effetto farfalla. Adesso c’è solo da sperare che arrivino déjà-vu su quanto ho fatto oggi. Ma oggi può benissimo essere un déjà-vu. C’è stato un momento, rifletté, in cui ho avuto ben chiaro in mente il quadro di questa situazione incasinata e mi sono spedito un messaggio per avvisarmi. Questo significa che alla fine uscirò da questo impiccio? Che interromperò il loop?
+
+«Merda!», esplose Victor, stremato da quelle domande senza risposta. Con un pugno colpì uno dei pannelli dell’Hab e si spaccò due nocche della mano destra. Strinse i denti, un velo di rabbia che a stento riuscì a sedare. Poi andò a prendere il kit di pronto soccorso e si medicò la ferita. Giudicò di non aver bisogno di punti, anche se il taglio alle dita appariva profondo e il sangue sembrava non arrestarsi. Tuttavia riuscì a tamponarlo quanto bastava per poter applicare una pomata cicatrizzante e una benda.
+
+Era troppo stanco per mangiare qualcosa e poi l’emicrania tornò a molestarlo. Prese due pillole di sonnifero e se ne andò a letto.
+
+Giorno lunare 12, ore 6:39 utc
+I sogni della notte precedente lo sfiancarono, ma si alzò con la decisione di chiamare il capcom. Era un pensiero germinato nella paludosa confusione di visioni oniriche e ricordi che l’aveva oppresso per tutta la notte. Al risveglio non seppe dire cosa avesse sognato e cosa ricordato, ma era certo di dover parlare con Kurt. Lo avevano preso in giro, forse convinti che non si sarebbe mai accorto del loop – un altro dettaglio non previsto dalla nasa – e Victor non voleva passare per stupido. No, voleva mettere in chiaro tutto, sputargli in faccia la verità, dirgli che da giorni stava rivivendo un pezzo della sua vita senza che si prospettasse una via d’uscita, costretto a un futuro già scritto, fatto di un passato duplicato. Voleva raccontargli dei disturbi sopraggiunti in seguito al loop. Voleva delle risposte e le voleva subito. Voleva sapere cosa stessero facendo per salvarlo, se i cervelloni del Johnson Space Center stessero lavorando per interrompere quel ciclo continuo temporale.
+
+Dopo essersi lavato, bevve una tazza di caffè forte, mangiò un paio di uova liofilizzate precotte e accese la radio. Il LunaCom non mostrò altre chiamate dal futuro e Victor si domandò che fine avesse fatto il Victor Bresnik del 13 luglio, quello che aveva capito tutto e gli aveva inviato un messaggio per metterlo sull’avviso. Quindi esisteva un futuro per lui? Il 13 luglio era l’indomani, ma un indomani originale o una sua replica? Una replica, non c’erano dubbi, visto che aveva coscienza, grazie ai déjà-vu, del tempo ripetuto. Si passò la mano nei capelli e chiuse gli occhi. Quella situazione lo avrebbe fatto impazzire.
+
+Avviò la chiamata al capcom.
+
+La chiamata si interruppe.
+
+Victor riprovò, ma il risultato fu identico. Fece un controllo veloce con il bug checker, ma non riscontrò errori nel sistema. Tentò altre chiamate, invano. C’era qualcosa che impediva al LunaCom di connettersi con la Terra. Ma cosa?
+
+Il dispositivo nel lander, forse?
+
+No, in fondo Victor si era autospedito un videomessaggio, quindi il LunaCom funzionava, almeno per gli invii in intranet. Vediamo se posso davvero inviarmi un videomessaggio, disse fra sé. Accese la webcam, guardò nell’obiettivo e mostrò il dito medio – in quel momento gli sembrò la cosa più ovvia da fare. Fermò la registrazione, la salvò e la inoltrò alla sua casella di posta. Pochi secondi dopo arrivò il bip della notifica. Okay, funziona. Ma allora perché non mi fa chiamare la Terra? Provò a spedire quel video all’email di Kurt, ma dopo alcuni minuti ricevette uno strano messaggio di errore: l’invio era andato in time out a causa di una lunga attesa del server smtp.
+
+«Maledizione!», sbottò. «Ma che diavolo sta succedendo?»
+
+Si alzò e si riempì un’altra tazza di caffè. Poi lasciò vagare lo sguardo oltre l’oblò, sul deserto lunare. Sarebbe stata quella la sua casa per il resto dell’esistenza? Il Mare Nubium? Sarebbe mai rientrato sulla Terra, avrebbe rivisto sua madre, i suoi amici, i suoi colleghi? Aveva voglia di una birra, di un hamburger con patatine inzuppate nel ketchup, aveva voglia di camminare sulle strade di Dallas, sentire il rumore delle auto e il vociare della gente. Gli mancava tutto questo, ma non per via dell’isolamento della missione, bensì perché quella missione non avrebbe mai avuto termine. Si chiese da quanto tempo fosse sulla Luna. Era allunato il 24 giugno, quindi in teoria era lì da diciotto giorni. In teoria. Ma quante repliche aveva vissuto? Da quanti giorni era esattamente sulla Luna? Magari era già passato un anno e neanche se n’era accorto. Magari era passato un decennio e sua madre era morta senza che lui ne sapesse nulla. Magari la vita sulla Terra si era già estinta e quello era il motivo per cui nessuna chiamata poteva esser ricevuta.
+
+Quel giorno avrebbe dovuto dedicarsi a mansioni leggere: controllare i filtri dell’aria e dell’acqua e iniziare la produzione di ortaggi nel vegs. Invece si sdraiò sull’amaca, accese il lettore e si mise a leggere un ebook. Dopo due minuti lo chiuse. Provò a guardare un film, ma si stancò già alle prime scene. Se ne restò lì, a guardare il soffitto dell’Hab, chiedendosi se esistesse una possibilità, anche minima, di tornare a casa e fermare quel loop.
+
+O se fosse meglio farla finita subito, prendere tutte le pillole rimaste, poi un bel sonnifero e via verso l’ultimo viaggio, quello senza ritorno.
+
+Con quel pensiero suicida nella mente chiuse gli occhi, cercando di rilassarsi, di non pensare a niente, finché si addormentò.
+
+Giorno lunare 12, ore 7:16 utc
+Victor fissò il suo volto sullo schermo del computer. Era un volto emaciato, non la sua consueta espressione mattutina, un viso non rasato da almeno tre giorni e uno sguardo non del tutto presente, nonostante la tazza di caffè appena bevuta. Ma erano appena le 7, che diavolo, era reduce da una eva, era andato a letto tardi, o almeno così credeva, e si trovava nella merda fino al collo grazie al loop temporale. Il problema non era il suo volto, però. La webcam lo aveva ripreso mentre mostrava il dito medio della sua mano destra e in questo non c’era nulla di speciale. Tranne il fatto che aveva già visto quell’immagine, poteva giurarci. Sì, ma quando? In quel preciso istante, ecco quando l’aveva vista. Fottuti déjà-vu! Quindi non aveva risolto nulla, l’effetto farfalla era soltanto una scemenza. Aveva rotto una cintura-razzo, impedendo così altre eva, si era allontanato varie volte dalla tabella di marcia, eppure era ancora lì a rivivere il vissuto. Il giorno prima era stato denso di déjà-vu, che da giorni si verificavano con sempre maggior frequenza – come le emicranie!
+
+Lasciò perdere quei ragionamenti e si concentrò sulla questione più immediata: non era riuscito a mettersi in contatto con Kurt. Eppure sarebbe stato bello pronunciare la fatidica frase «Houston, ho un problema». Ma la chiamata si era interrotta di continuo, eppure il LunaCom funzionava a dovere. Così inviò quel breve video a se stesso, alla sua casella di posta, e lo ricevette in pochi secondi. Fin qui tutto bene, disse fra sé. Ora vediamo se me lo fa inviare sulla Terra. Lo inoltrò all’email di Kurt e attese. Due minuti dopo giunse la risposta: un messaggio di errore. Il server smtp aveva tentato diversi invii e infine era andato in time out. Victor imprecò. Era tagliato fuori, totalmente isolato sulla Luna. Questo significava che avrebbe dovuto cavarsela da sé. Dubitava che al Johnson Space Center si stessero dando da fare per risolvere il suo problema. Ne erano almeno al corrente? Forse sì, forse no. Di certo, non ricevendo né chiamate né email, si sarebbero insospettiti. Magari avrebbero addossato la colpa al LunaCom. Prima o poi, sperava Victor, avrebbero inviato sulla Luna una squadra di soccorso. E se invece non fosse venuto nessuno a salvarlo? Si ritrovò a pensare a Dallas, la sua città, ai rumori nelle strade, alla gente che passeggiava. Si ritrovò a desiderare un hamburger pieno di ketchup, con un abbondante contorno di patatine fritte. Quanto gli mancava tutto questo!
+
+Piangersi addosso non serviva a niente, pensò.
+
+È l’effetto farfalla, amico mio, che ti salverà. Ti resta solo quello.
+
+Be’, caro Victor del 13 luglio, il tuo effetto farfalla non m’ha salvato per niente. Ritenta, sarai più fortunato.
+
+Modifica gli eventi, anche di un’inezia. E forse riuscirai a trovare una soluzione per tornare alla normalità.
+
+Ma non li aveva modificati? Certo, e neanche pochi. Aveva iniziato a modificarli da quando aveva ricevuto quel messaggio. E cosa era cambiato? Nulla. Era ancora lì, a cercare di capire come bloccare quel loop, visto che non era riuscito a trovare il dispositivo su Avior.
+
+Fu allora che gli giunse la soluzione, inaspettata come il bacio di una bellissima donna, improvvisa come un temporale estivo, desiderata come un amplesso troppo a lungo ritardato.
+
+E apocalittica come una bomba nucleare.
+
+Giorno lunare 12, ore 8:03 utc
+Se c’era una cosa in cui gli ingegneri della nasa si erano fossilizzati, era la procedura che avrebbe portato un equipaggio umano sulla Luna: alle soglie del xxii secolo si preferiva ancora il rendezvous in orbita lunare ideato da John Houbolt nel 1961. Con le dovute migliorie, ovvio. Nel frattempo la tecnologia aveva compiuto qualche passo in più rispetto al secolo precedente.
+
+«Non aspettarti una nave spaziale come in Guerre stellari», disse Victor a sua madre quattro mesi prima della partenza. «Andrò sulla Luna come ci andarono Armstrong e Aldrin, anche se con un razzo ben più veloce e avanzato.»
+
+«Quindi partirete in due», concluse Virginia Bresnik. «Chi ti aspetterà nel csm?»
+
+«Nessuno, mamma», rispose Victor. «Non ci sarà un Collins nel modulo di comando. È una navicella robotizzata.»
+
+Alla signora Bresnik quella notizia non piacque neanche un po’. Affidare la vita del suo unico figlio a un pupazzo meccanico era per lei inaccettabile. Volle capire fin nei minimi dettagli come il figlio sarebbe arrivato sulla Luna e come ne sarebbe ripartito, tornando sano e salvo a Dallas. Si tranquillizzò soltanto quando Victor le mostrò un filmato in 3D che simulava il lancio, l’entrata nell’orbita lunare, l’allunaggio, la partenza e infine l’ammaraggio nell’Oceano Pacifico.
+
+Il veicolo di lancio era un razzo multistadio della serie Eris, progettata nel 2074. Il 23 giugno 2081 alle ore 12:48:07 utc Victor partì con Eris IV, formato dal modulo di comando e servizio, il csm (che Victor chiamò Virginia), dal modulo lunare (che battezzò Avior, dal nome di una stella binaria), e dagli stadi s-ivb, s-ii e s-ic, che contenevano il propellente. Il giorno successivo, alle ore 08:13:43 utc, entrò nell’orbita lunare e il 24 giugno alle 20:39:45 utc Avior toccava il suolo lunare. Da lì sarebbe ripartito dopo sei mesi. Avior avrebbe usato lo stadio di discesa come piattaforma di lancio, sarebbe entrato in orbita per riagganciarsi a Virginia, quindi Victor sarebbe passato dal modulo lunare al csm, avrebbe sganciato Avior e sarebbe rientrato nell’atmosfera terrestre. Lì il csm si sarebbe diviso in due e soltanto il modulo di comando sarebbe ammarato nelle acque dell’oceano.
+
+Avior. Non era davvero necessario, pensò Victor, separarlo dal modulo di comando e servizio. Avior era decisamente più leggero dei moduli lunari delle vecchie missioni Apollo, che pesavano quasi cinque tonnellate. Il peso di Avior era di 3.853 chilogrammi. Il csm aveva una massa totale di 24.336 kg, di cui 4.776 per il cm. Se non avesse sganciato il modulo lunare dal modulo di comando, avrebbe fatto navigare nello spazio una navicella con una massa di 8.629 kg. Il combustibile era più che sufficiente per farlo arrivare nell’atmosfera terrestre. Da lì in poi ci avrebbe pensato la forza di gravità. I paracaduti si sarebbero aperti, anche se la navicella, a causa della presenza di Avior, sarebbe discesa obliqua. Non sarebbe stato un ammaraggio elegante, ma non doveva certo partecipare a un concorso. Doveva soltanto arrivare intera sulla Terra, con il suo carico segreto, quello che la nasa gli aveva tenuto nascosto: il dispositivo che mandava il tempo in loop. Dalla Terra avrebbero saputo della partenza della navicella, si sarebbero insospettiti, ma avrebbero mandato la uss Lemington a recuperarla, la quale avrebbe comunicato a Houston la presenza di Avior e allora tutti avrebbero capito, ancor prima di trovare il messaggio registrato di Victor.
+
+Ma a quel punto sarebbe stato troppo tardi.
+
+Victor si appoggiò allo schienale della sedia e chiuse gli occhi. Nonostante l’emicrania e la nausea – durante la notte aveva vomitato anche l’anima – riuscì a prendere quella decisione. Si era svegliato la notte prima con degli atroci dolori allo stomaco e una morsa che gli stava stritolando le pareti del cranio. Non aveva fatto in tempo a prendere un sacchetto per il vomito e gli era toccato quindi ripulire tutto, o avrebbe dovuto dormire su una pozzanghera di succhi gastrici. Il risveglio era stato traumatico. Aveva aperto gli occhi in una stanza di luce livida, piena di oggetti sfocati e tremolanti. Aveva provato a ricordare gli eventi della sera prima, ma erano un guazzabuglio di immagini distorte e sequenze di azioni senza capo né coda.
+
+Victor stava precipitando.
+
+Stava andando sempre più giù, in fondo a un baratro di cui non vedeva il fondo. C’era solo buio, piena oscurità, tenebre più fitte e dense dello spazio profondo.
+
+Victor doveva fare qualcosa. Si era ritrovato a meditare il suicidio per la prima volta in vita sua. In piena notte aveva avuto voglia di sabotare Avior, di farlo esplodere per porre fine ai suoi tormenti, anche se l’esplosione avrebbe potuto ucciderlo. E in quel momento aveva desiderato che accadesse. Infine, come un angelo custode sceso sulla Luna a dargli conforto, fu proprio Avior a fornirgli la soluzione. O, almeno, a dare il via al ragionamento che lo aveva portato alla soluzione del problema.
+
+Non c’era bisogno di far saltare in aria Avior.
+
+Bastava rispedirlo sulla Terra.
+
+Tornarsene a casa e abbandonare la missione avrebbe significato trovarsi ancora in mezzo al ciclo temporale, imprigionato nel loop anche sulla Terra, finché alla nasa non avessero capito come risolvere il guaio. Magari con una carica di esplosivo.
+
+Sì, si convinse sempre più, Avior doveva tornare sulla Terra senza di lui.
+
+Giorno lunare 12, ore 14:57 utc
+Il lancio era previsto per le ore 21:06:00. Victor si connetté al computer di bordo del lander e iniziò a registrare il video in cui avvisava Houston del motivo del rientro imprevisto del Virginia. Quando si mise davanti alla webcam, si chiese se non dovesse apparire in una forma migliore, magari rasato, ben pettinato, con indosso abiti puliti e non la maglia sudicia di caffè, vomito e sudore. Ma poi pensò che fosse meglio che al Centro di controllo missione lo vedessero com’era ridotto, sfinito dalle notti insonni e agitate, smagrito dai malesseri e dalla mancanza di appetito, turbato dal nervosismo e dagli attacchi di panico e ansia.
+
+“Houston, c’è stato un problema”, esordì – alla fine era riuscito a inserire la fatidica frase –, “ma credo di averlo risolto. Quando sono andato al cratere Wolf, ho iniziato ad avere dei déjà-vu, che si sono fatti sempre più frequenti. All’inizio non ne capivo la ragione, ma alla fine ho scoperto cosa li causava. Ma voi, lì, sapete benissimo di cosa sto parlando. Non sapete dei déjà-vu, forse, ma sapete del congegno che avete portato sulla Luna a mia insaputa. A proposito, grazie, Kurt. Ero convinto che un capcom fosse un appoggio concreto per gli astronauti. Ero anche convinto che fossimo amici. Non so a cosa serva quell’affare, ma qui ha mandato il tempo in loop. Sì, avete sentito bene. Per giorni – o mesi, anni? – ho rivissuto da capo ogni momento, senza avere neanche una vaga idea di come bloccare quel circolo vizioso. Poi ho avuto una folgorazione, ma avrete capito anche questo. In fondo la uss Lemington vi ha avvisato della presenza di Avior assieme al modulo di comando. E dentro Avior sappiamo tutti cosa c’è. Sono convinto che avete i mezzi per disattivare il dispositivo, o per distruggerlo, ma intanto godetevi qualche giorno a ciclo continuo. Vedete, avrei potuto farlo saltare in aria, assieme alla navicella: sarei magari morto o al massimo sarei restato sulla Luna senza poter rientrare, in attesa di una squadra di soccorso. Ma perché privarvi della possibilità di vivere ciò che voi mi avete costretto a vivere? Ah, un’ultima cosa. Se state pensando di farmela pagare e abbandonarmi quassù a morire di fame, sappiate che tutta la verità su quanto accaduto sarà a disposizione della uss Lemington. Appena qualcuno della nave entrerà nella navicella, sarà salutato da questa registrazione. Risparmiate dunque al Presidente il comunicato stampa di contingenza, non è davvero il caso. Buona vita, gente, e iniziate a preparare la squadra di recupero.”
+
+Sì, poteva bastare, Victor era soddisfatto. Avrebbe voluto pronunciare poche parole, ma poi si era lasciato andare all’amarezza. Le cose stavano in quei termini, si disse, dopo aver scritto la bozza del suo discorso. Aveva detto tutto ciò che doveva dire. Probabilmente non avrebbe più partecipato ad altre missioni spaziali, ma se ne sarebbe fatto una ragione. O forse i vertici della nasa sarebbero stati licenziati e allora tutto sarebbe finito per il meglio. Magari il prossimo capcom sarebbe stato proprio lui.
+
+Okay, era meglio non fantasticare troppo. Doveva mettersi al lavoro, adesso, e terminare i preparativi per il lancio.
+
+Giorno lunare 12, ore 20:58:00 utc
+Victor iniziò la procedura di decollo di Avior, anzi dello stadio di ascesa, alle ore 18:00:00 utc. Mezz’ora prima si era scolato un’abbondante tazza di caffé e aveva ingoiato alcune pillole di entocibina, ma emicrania e nausea non erano passate. Resisti, Victor, si era detto, manca poco ormai alla fine dei tuoi guai. E Victor aveva resistito.
+
+Il computer eseguì tutti i controlli, impostando l’inclinazione della capsula una volta abbandonata la superficie lunare. Poi, una volta in orbita, avrebbe corretto e regolato la sua rotta per la fase di attracco a Virginia. L’accelerazione iniziale della capsula sarebbe stata di 4,2 m/s2. Avior avrebbe raggiunto la sua orbita lunare iniziale alla velocità di circa 5.000 chilometri orari. Il computer comunicò che il propellente sarebbe bastato. Un’ora e mezzo dopo la capsula si sarebbe trovata a sessanta chilometri da Virginia e avrebbe iniziato la manovra di avvicinamento per il rendezvous, viaggiando a 40 m/s. Giunta a circa cento metri da Virginia, avrebbe rallentato fino a una velocità relativa di 15 cm/s. A quel punto il robot all’interno del csm avrebbe preso i comandi della capsula, teleguidandola fino ad allineare la sonda di aggancio del modulo di comando con il cono di aggancio della navetta, per avere un corretto ancoraggio. A contatto avvenuto non ci sarebbe stato nessun passaggio dell’equipaggio a bordo del Virginia, come Victor aveva comunicato al computer del csm. Il sistema di propulsione avrebbe poi lanciato la navetta lungo la traiettoria verso la Terra.
+
+Victor si concesse un momento di rilassamento, abbandonandosi sullo schienale della sedia e chiudendo gli occhi per qualche secondo. Si chiese se stesse facendo la cosa giusta e il pensiero andò a sua madre. Forse non si sarebbe accorta dei déjà-vu, forse la nasa avrebbe fatto saltare in aria Avior con il suo pericoloso contenuto. Si chiese anche quanto tempo avrebbe dovuto trascorrere sulla Luna prima che una squadra di recupero fosse sbarcata per portarlo via. La procedura prevedeva di far allunare la squadra di soccorso almeno dieci giorni prima che terminassero le provviste. Facendo due calcoli, avrebbe dovuto arrivare intorno al 14 dicembre, quindi gli restavano ancora centosessantuno giorni. Ormai la missione EcoMoon non aveva più senso, se mai ne avesse avuto uno. Davvero la nasa lo aveva spedito quassù per sei mesi come primo esperimento per una permanenza prolungata sulla Luna, in attesa della costruzione di una città lunare? O EcoMoon era soltanto un nome di facciata per nascondere una missione con altri fini? E cosa prevedeva quella missione? Un loop temporale? O qualcosa di diverso? No, pensò, EcoMoon era costata troppo per essere una semplice missione di copertura. Era invece più probabile che l’agenzia spaziale avesse voluto nascondergli un ulteriore esperimento, che quel dispositivo fosse legato alle prolungate permanenze dell’uomo sulla Luna.
+
+Forse non avrebbe mai avuto una risposta alle sue domande, neanche se avesse scatenato una polemica gigantesca, pubblicato articoli su decine di quotidiani e presenziato a chissà quanti programmi tv. Magari al rientro avrebbe scritto un libro sulla sua avventura. Altri astronauti lo avevano fatto, parlando della propria esperienza nello spazio. Ma che avrebbe scritto? Sarebbe stato un libro ripetitivo, si disse, sorridendo.
+
+I minuti trascorsero e giunse il momento del conto alla rovescia.
+
+10, 9, 8, 7, 6…
+
+Accensione!
+
+4, 3, 2, 1, 0…
+
+Decollo!
+
+Con un’esplosione Avior si separò dalla piattaforma di lancio e venne sparato verso l’alto, verso le profondità inalterabili del cielo lunare. Victor osservò tutto dall’oblò dell’Hab e restò a guardare finché la capsula non divenne un puntino chiaro nelle tenebre del cosmo e scomparve. Poi ne seguì il volo dal monitor.
+
+Come previsto, novantatré minuti dopo la navetta giunse a una distanza di sessanta chilometri dal Virginia e iniziò a rallentare. A circa trenta chilometri la sua velocità diminuì a 15 cm/s. Victor controllò sullo schermo i dati in arrivo. Il robot nel modulo di comando stava pilotando Avior regolandone inclinazione e traiettoria. L’operazione di aggiustamento sarebbe durata finché i due moduli si sarebbero trovati perfettamente allineati a una distanza di pochi metri uno dall’altro.
+
+Circa un’ora più tardi le due capsule furono a poco più di un metro di distanza fra loro e la velocità di Avior scese fino a 7 cm/s. Victor ingrandì l’immagine sul monitor. La sonda di aggancio entrò con precisione millimetrica nel cono di aggancio del Virginia. L’attracco era avvenuto con successo!
+
+Adesso le due capsule congiunte avrebbero percorso un’orbita lunare e poi si sarebbero dirette verso la Terra.
+
+A Victor non restava che attendere.
+
+E bere un goccio di bourbon. Diavolo, se se l’era meritato!
+
+Giorno lunare 173, ore 17:29 utc
+Laura Bowman fissò Victor per qualche istante, prima di ripetere la domanda. Era il comandante della missione di soccorso, appena giunta sulla Luna per prelevare Victor e ripartire dopo qualche giorno. Come Victor aveva previsto, la nasa aveva inviato la nuova navetta dieci giorni prima della fine della missione.
+
+Anche dalla Terra erano stati impossibilitati a chiamare e spedire email verso la Luna. Dunque il dispositivo creava dei conflitti con i server, mandandoli in time out. Alla nasa, comunque, erano stati ingegnosi. Due mesi dopo l’arrivo del Virginia avevano lanciato in un’orbita iperbolica il satellite Thetasat. Dal satellite era partito un messaggio in codice Morse preimpostato dalla Terra, che aveva raggiunto senza problemi l’avamposto di Victor sulla Luna. Il computer dell’Hab lo aveva poi decifrato automaticamente. La nasa lo avvisava che il 14 dicembre sarebbe giunta una squadra comandata dal Capitano Bowman.
+
+La navicella era allunata a circa un paio di chilometri di distanza dall’Hab. Victor era montato sul rover e era andato a prendere i suoi colleghi, Laura e Kenneth Davis. Nell’Hab sarebbero stati un po’ stretti, ma il soggiorno sarebbe stato breve. La missione, denominata EcoMoon Rescue, era stata approntata in tempi da record, con un nuovo capcom a tenere i contatti con la Terra. Victor si chiese che fine avesse fatto Kurt, ma non volle indagare. Una volta nell’Hab, i due nuovi inquilini si erano liberati delle tute e Victor aveva offerto loro un bicchierino del suo bourbon per festeggiare l’evento.
+
+Fu allora che Laura chiese a Victor come se l’era cavata tutto solo sulla Luna per sei mesi.
+
+Victor non rispose, ma rimase a fissarla come imbambolato.
+
+Laura ripeté la domanda, un leggero sorriso che le incurvava la bocca. Kenneth finì di scolare il suo liquore e si appoggiò al tavolo del computer, in attesa che Victor parlasse.
+
+Victor, da parte sua, perse un po’ del colore naturale del viso. Avvertì anche un vago tremolio alle labbra e alle mani e dovette posare il bicchiere prima di farlo cadere a terra. Da qualche parte nella sua testa una leggera emicrania iniziava a far sentire la sua presenza. Poi Victor tornò a fissare Laura come se fosse apparsa lì nell’Hab all’improvviso, un fantasma lunare proiettato dalla sua mente provata dagli ultimi eventi e dall’isolamento cosmico. Ma Laura era reale, non era uno spettro, erano reali tutti e due, stavano lì e erano venuti a prenderlo. E presto sarebbe ritornato a casa, a Dallas, sulla Terra, lontano dalla Luna e dalle sue follie. Avrebbe riabbracciato sua madre e i suoi amici. E allora perché sentiva quel malore impossessarsi di lui, del suo corpo, della sua mente? Perché sentiva crollare attorno a sé ogni speranza? Perché aveva voglia di uscire dall’Hab senza tuta e lasciarsi morire?
+
+Laura ripeté la domanda per la terza volta, lo sguardo ora confuso.
+
+E allora Victor ebbe la certezza. Tutti i suoi sospetti, che l’inconscio aveva tenuto ben occultati, erano stati ora messi a nudo da una parola, una sola parola che gli lacerò i pensieri come una lama arrugginita.
+
+Déjà-vu.
+
+Nota
+Rispetto al passato scrivere oggi una storia di fantascienza è difficoltoso – opinione mia personale. La tecnologia è andata avanti, le missioni spaziali sono aumentate e un autore di fantascienza non può non tenerne conto.
+
+Per scrivere “Fuga dal tempo” mi sono dovuto documentare a ogni sessione di scrittura: c’era sempre qualche dettaglio da conoscere. Da una iniziale lettura delle missioni Apollo sono approdato alle procedure dell’allunaggio e del rientro sulla Terra, allo studio delle mappe lunari, agli strumenti portati sulla Luna e via dicendo. Tutto ciò ha chiaramente rallentato la stesura del racconto, ma è stato divertente e anche istruttivo.
+
+Grazie ad Anna, mia lettrice beta, che ha individuato nel testo una grossa lacuna a me sfuggita e per gli ottimi consigli di sempre.
+
+Sono possibili i loop temporali? Cercando informazioni in rete, pare che si riscontrino soltanto in letteratura e cinematografia. Edge of Tomorrow di Doug Liman, con Tom Cruise, ne è un buon esempio.
+
+Se leggete il saggio di Arnaldo Benini Neurobiologia del tempo, capirete che i loop temporali non sono assolutamente possibili. Il tempo è creato da… no, non voglio rovinarvi la sorpresa.
+
+Ma allora perché ho scritto “Fuga dal tempo”?
+
+Perché le storie servono anche a questo. A reinventare la realtà.
