@@ -251,7 +251,7 @@ namespace BVP {
      * The default is `0`, a neutral fallback when the exact solution
      * is not known.
      */
-    virtual real_type exact(  [[maybe_unused]] real_type x,  [[maybe_unused]] integer i ) const { return 0; }
+    virtual real_type exact( [[maybe_unused]] real_type x, [[maybe_unused]] integer i ) const { return 0; }
 
   };
 
