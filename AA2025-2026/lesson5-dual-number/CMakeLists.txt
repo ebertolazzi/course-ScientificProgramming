@@ -11,6 +11,18 @@ set(EIGEN3_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../eigen-5.0.1")
 # TinyAD
 set(TINYAD_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../TinyAD-main/include")
 
+# CppAD
+set(CPPAD_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../CppAD-20260000.0/include")
+set(CPPAD_LIBRARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../CppAD-20260000.0/build/cppad_lib")
+find_library(CPPAD_LIB cppad_lib
+  PATHS "${CPPAD_LIBRARY_DIR}"
+  NO_DEFAULT_PATH
+  REQUIRED
+)
+
+# autodiff
+set(AUTODIFF_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../autodiff-1.1.2")
+
 # {fmt}
 set(LOCAL_FMT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../fmt-12.1.0")
 set(LOCAL_FMT_BUILD_DIR "${LOCAL_FMT_DIR}/build")
@@ -57,6 +69,48 @@ target_compile_options(test2 PRIVATE
   -Wno-deprecated-copy
 )
 
+# TinyAD vs CppAD comparison executable
+add_executable(test3 src/test3.cc)
+target_include_directories(test3 PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+target_include_directories(test3 SYSTEM PRIVATE
+  ${EIGEN3_INCLUDE_DIR}
+  ${TINYAD_INCLUDE_DIR}
+  ${CPPAD_INCLUDE_DIR}
+)
+target_link_libraries(test3 PRIVATE "${CPPAD_LIB}")
+target_compile_options(test3 PRIVATE
+  -O2
+  -Wall
+  -Wextra
+  -Wno-unused-parameter
+  -Wno-unused-variable
+  -Wno-deprecated-copy
+)
+set_target_properties(test3 PROPERTIES
+  BUILD_RPATH "${CPPAD_LIBRARY_DIR}"
+)
+
+# TinyAD vs autodiff comparison executable
+add_executable(test4 src/test4.cc)
+target_include_directories(test4 PRIVATE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+target_include_directories(test4 SYSTEM PRIVATE
+  ${EIGEN3_INCLUDE_DIR}
+  ${TINYAD_INCLUDE_DIR}
+  ${AUTODIFF_INCLUDE_DIR}
+)
+target_compile_options(test4 PRIVATE
+  -O2
+  -Wall
+  -Wextra
+  -Wno-unused-parameter
+  -Wno-unused-variable
+  -Wno-deprecated-copy
+)
+
 # Doxygen documentation
 set(DOXYGEN_OUTPUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/docs")
 set(DOXYGEN_CONFIG_FILE "${CMAKE_CURRENT_BINARY_DIR}/Doxyfile")
@@ -76,5 +130,8 @@ add_custom_target(doc
 
 message(STATUS "Eigen: ${EIGEN3_INCLUDE_DIR}")
 message(STATUS "TinyAD: ${TINYAD_INCLUDE_DIR}")
+message(STATUS "CppAD: ${CPPAD_INCLUDE_DIR}")
+message(STATUS "CppAD library: ${CPPAD_LIB}")
+message(STATUS "autodiff: ${AUTODIFF_INCLUDE_DIR}")
 message(STATUS "{fmt}: ${LOCAL_FMT_DIR}")
 message(STATUS "Doxygen: ${DOXYGEN_EXECUTABLE}")
