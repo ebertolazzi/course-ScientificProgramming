@@ -13,3 +13,7 @@ CMakeCache.txt
 AA2025-2026/exercize2/docs
 AA2025-2026/exercize2/exe
 AA2025-2026/exercize3/exe
+*.aux
+*.log
+*.gz
+*.toc
